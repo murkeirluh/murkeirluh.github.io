@@ -1,0 +1,28 @@
+$palettes: (
+    matcha: (
+        culinary: #546135,
+        cafe: #ACAA5F,
+        ceremonial: #6D7C5D,
+        base: #7E8B69,
+        latte: #D8D69B,
+        milky: rgb(224, 223, 174)
+    ),
+
+    milk: (
+        soy: #F9E9E0,
+        almond: #E9E0CE,
+        oat: #FBF5EC,
+    ),
+
+    azuki: (
+        base: #544928,
+        burnt:rgb(63, 54, 29)
+    ),
+);
+
+
+// http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+  

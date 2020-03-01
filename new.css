@@ -1,0 +1,127 @@
+html, body {
+  font-family: "Noto Sans" !important;
+  color: #544928;
+  background-color: #FBF5EC;
+  margin: 0;
+  height: 100%;
+}
+
+strong {
+  color: #3f361d;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: #546135;
+  font-family: "Noto Sans JP", !important;
+  font-weight: 700 !important;
+}
+
+p {
+  color: #544928;
+}
+
+main#main {
+  display: flex;
+  flex-direction: row !important;
+  height: 100%;
+}
+main#main section.sidebar {
+  display: flex;
+  background: #e0dfae;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+main#main section.sidebar .intro {
+  flex-grow: 1;
+  margin: auto;
+  justify-items: center;
+  padding: 2rem 0;
+}
+main#main section.sidebar .intro p {
+  color: #544928;
+}
+main#main section.sidebar .intro img.icon {
+  border-radius: 50%;
+  border: 5px solid #F9E9E0;
+  width: 130px;
+  height: 130px;
+  margin: 0.8rem;
+}
+main#main section.sidebar .intro h1, main#main section.sidebar .intro h2, main#main section.sidebar .intro h3 {
+  font-weight: 700;
+  color: #546135;
+  font-family: "Noto Sans JP", !important;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+main#main section.sidebar .intro i, main#main section.sidebar .intro a i, main#main section.sidebar .intro a:active i {
+  font-size: 1.5rem;
+  padding: 0.4rem 0.2rem;
+  color: #6D7C5D;
+  transition: ease-in 0.2s;
+  -moz-transition: ease-in 0.2s;
+}
+main#main section.sidebar .intro a:hover i {
+  color: #544928;
+  transition: ease-in 0.2s;
+  -moz-transition: ease-in 0.2s;
+}
+main#main section.sidebar .credits {
+  font-size: small;
+  display: flex;
+  justify-content: center;
+}
+main#main section.content {
+  flex: 4;
+  flex-direction: column;
+  margin: 0 2.5rem;
+}
+main#main section.content .navigation {
+  margin: 1rem 0;
+  text-transform: lowercase;
+}
+main#main section.content .navigation a {
+  text-decoration: none;
+}
+main#main section.content .navigation a, main#main section.content .navigation a:active {
+  color: #6D7C5D;
+  font-family: "Noto Sans JP";
+  font-weight: 500;
+  display: inline-flex;
+  padding: 0.15rem 0.4rem;
+  margin-right: 1rem;
+  border-bottom: 0.3rem solid transparent;
+}
+main#main section.content .navigation a:hover, main#main section.content .navigation .nav-link.active {
+  font-weight: 700;
+  border-bottom: 0.3rem solid #ACAA5F;
+  cursor: pointer;
+  color: #546135;
+}
+main#main section.content .body {
+  margin-top: 1.8rem;
+}
+main#main section.content .body h1 {
+  margin-bottom: 1.2rem;
+}
+main#main section.content .body a.download {
+  display: inline-block;
+  padding: 0.7rem;
+  background: #7E8B69;
+  border-radius: 7px;
+  color: #FBF5EC;
+  margin-right: 0.3rem;
+}
+main#main section.content .body a.download:hover {
+  text-decoration: none;
+  background-color: #ACAA5F;
+}
+main#main section.content .body iframe {
+  margin: 0.7rem 0;
+}
+
+/*# sourceMappingURL=new.css.map */
