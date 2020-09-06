@@ -4,8 +4,7 @@ html, body {
     font-family: 'Noto Sans' !important;
     color: palette(azuki, base);
     background-color: white;
-    margin: 0;
-    height: 100vh;
+    height: 100%;
 }
 
 strong {
@@ -13,7 +12,7 @@ strong {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 0;
+    //margin: 0;
     color: palette(matcha, culinary);
     font-family: 'Noto Sans JP',  !important;
     font-weight: 700 !important;
@@ -21,133 +20,124 @@ h1, h2, h3, h4, h5, h6 {
 
 p { color: palette(azuki, base); }
 
-main#main {
+svg {
+    width: 100%;
+    padding: 0;
+}
+
+text {
+    fill: palette(matcha, milky);
+    padding: 1.3rem 0;
+    letter-spacing: -1.4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 0;
+}
+
+main.content {
+    max-width: 600px;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: small;
+}
+
+nav {
     display: flex;
-    flex-direction: row-reverse;
+    font-size: 2rem;
+    color: palette(milk, oat);
 
-    section.sidebar {
-        display: flex;
-        background: palette(matcha, milky);
-        flex-direction: column;
-        flex: 1;
-        padding: 0 1.5rem;
+    .first.row {
+        //margin-bottom: 2px;
+
+        :first-child {
+            //margin-right: 1px;
+            background-color: palette(matcha, ceremonial);
+        }
+
+        :last-child {
+            //margin-left: 1px;
+            background-color: palette(matcha, culinary);
+        }
+    }
+
+    .second.row {
+        //margin-bottom: 2px;
+
+        :first-child {
+            //margin-right: 1px;
+            background-color: palette(matcha, culinary);
+        }
+
+        :last-child {
+            //margin-left: 1px;
+            background-color: palette(matcha, ceremonial);
+        }
+    }
+
+    .nav-block {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: calc(50% - 5px);
+        padding: 2rem;
         text-align: center;
-        justify-content: space-between;
-        min-height: 100vh;
+        height: calc(12rem + 1vh);
+        font-weight: 700;
+    }
+}
 
-        .intro {
-            display: flex;
+@media screen and (max-width: 700px) {
+    nav {
+        font-size: 4.5vw;
+
+        .first.row, .second.row {
             flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            padding: 2rem 0;
 
-            p {
-                color: palette(azuki, base);
-            }
-
-            img.icon {
-                border-radius: 50%;
-                border: 5px solid palette(milk, soy);
-                width: 130px;
-                height: 130px;
-                margin: 0.8rem;
-            }
-    
-            h1, h2, h3 {
-                font-weight: 700;
-                color: palette(matcha, culinary);
-                font-family: 'Noto Sans JP',  !important;
-                letter-spacing: -1px;   
-                margin-bottom: 1rem;
-            }
-    
-            i, a i, a:active i {
-                font-size: 1.5rem;
-                padding: 0.4rem 0.2rem;
-                color: palette(matcha, culinary);
-                transition: ease-in 0.2s;
-                -moz-transition: ease-in 0.2s;
-            }
-    
-            a:hover i {
-                color: palette(milk, oat);
-                transition: ease-in 0.2s;
-                -moz-transition: ease-in 0.2s;
-            }
-        }
-
-        .credits {
-            font-size: small;
-            display: flex;
-            justify-content: center;
-        }
-        
-    }
-    
-    section.content {
-        flex: 4;
-        flex-direction: column;
-        margin: 0 2.5rem;
-
-        .greeting {
-            font-size: 6rem;
-            color: palette(matcha, milky);
-            padding: 1.3rem 0;
-            letter-spacing: -0.2rem;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-        }
-
-        .navigation {
-            margin: 1rem 0;    
-            text-transform: lowercase;
-
-            a { text-decoration: none; }
-
-            a, a:active {
+            :first-child {
                 background-color: palette(matcha, ceremonial);
-                color: white;
-                font-family: 'Noto Sans JP', ;
-                font-weight: 500;
-                display: inline-flex;
-                padding: 0.35rem 0.9rem;
-                margin-right: 1rem;
-                
             }
-
-            a:hover, .nav-link.active {
-                font-weight: 700;
-                cursor: pointer;
-                color: palette(matcha, culinary);
+    
+            :last-child {
+                background-color: palette(matcha, culinary);
             }
         }
-
-        .body {
-            margin-top: 1.8rem;
-            
-            h1 {
-                margin-bottom: 1.2rem;
-            }
-
-            a.download {
-                display: inline-block;
-                padding: 0.7rem;
-                background: palette(matcha, base);
-                border-radius: 7px;
-                color: palette(milk, oat);
-                margin-right: 0.3rem;
-            }
-
-            a.download:hover {
-                text-decoration: none;
-                background-color: palette(matcha, cafe);
-            }
-
-            iframe {
-                margin: 0.7rem 0;
-            }
+    
+        .nav-block {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
         }
     }
+
     
+    footer {
+        font-size: 0.7rem;
+
+        span { display: block; }
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    main.content {
+        position: absolute;
+        margin: auto;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
 }

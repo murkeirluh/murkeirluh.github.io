@@ -2,8 +2,7 @@ html, body {
   font-family: "Noto Sans" !important;
   color: #544928;
   background-color: white;
-  margin: 0;
-  height: 100vh;
+  height: 100%;
 }
 
 strong {
@@ -11,7 +10,6 @@ strong {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
   color: #546135;
   font-family: "Noto Sans JP", !important;
   font-weight: 700 !important;
@@ -21,115 +19,102 @@ p {
   color: #544928;
 }
 
-main#main {
-  display: flex;
-  flex-direction: row-reverse;
+svg {
+  width: 100%;
+  padding: 0;
 }
-main#main section.sidebar {
-  display: flex;
-  background: #bed297;
-  flex-direction: column;
-  flex: 1;
-  padding: 0 1.5rem;
-  text-align: center;
-  justify-content: space-between;
-  min-height: 100vh;
-}
-main#main section.sidebar .intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 0;
-}
-main#main section.sidebar .intro p {
-  color: #544928;
-}
-main#main section.sidebar .intro img.icon {
-  border-radius: 50%;
-  border: 5px solid #F9E9E0;
-  width: 130px;
-  height: 130px;
-  margin: 0.8rem;
-}
-main#main section.sidebar .intro h1, main#main section.sidebar .intro h2, main#main section.sidebar .intro h3 {
-  font-weight: 700;
-  color: #546135;
-  font-family: "Noto Sans JP", !important;
-  letter-spacing: -1px;
-  margin-bottom: 1rem;
-}
-main#main section.sidebar .intro i, main#main section.sidebar .intro a i, main#main section.sidebar .intro a:active i {
-  font-size: 1.5rem;
-  padding: 0.4rem 0.2rem;
-  color: #546135;
-  transition: ease-in 0.2s;
-  -moz-transition: ease-in 0.2s;
-}
-main#main section.sidebar .intro a:hover i {
-  color: #FBF5EC;
-  transition: ease-in 0.2s;
-  -moz-transition: ease-in 0.2s;
-}
-main#main section.sidebar .credits {
-  font-size: small;
-  display: flex;
-  justify-content: center;
-}
-main#main section.content {
-  flex: 4;
-  flex-direction: column;
-  margin: 0 2.5rem;
-}
-main#main section.content .greeting {
-  font-size: 6rem;
-  color: #bed297;
+
+text {
+  fill: #bed297;
   padding: 1.3rem 0;
-  letter-spacing: -0.2rem;
+  letter-spacing: -1.4px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  padding: 0;
 }
-main#main section.content .navigation {
-  margin: 1rem 0;
-  text-transform: lowercase;
+
+main.content {
+  max-width: 600px;
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-main#main section.content .navigation a {
-  text-decoration: none;
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: small;
 }
-main#main section.content .navigation a, main#main section.content .navigation a:active {
-  background-color: #91b85f;
-  color: white;
-  font-family: "Noto Sans JP";
-  font-weight: 500;
-  display: inline-flex;
-  padding: 0.35rem 0.9rem;
-  margin-right: 1rem;
-}
-main#main section.content .navigation a:hover, main#main section.content .navigation .nav-link.active {
-  font-weight: 700;
-  cursor: pointer;
-  color: #546135;
-}
-main#main section.content .body {
-  margin-top: 1.8rem;
-}
-main#main section.content .body h1 {
-  margin-bottom: 1.2rem;
-}
-main#main section.content .body a.download {
-  display: inline-block;
-  padding: 0.7rem;
-  background: #7E8B69;
-  border-radius: 7px;
+
+nav {
+  display: flex;
+  font-size: 2rem;
   color: #FBF5EC;
-  margin-right: 0.3rem;
 }
-main#main section.content .body a.download:hover {
-  text-decoration: none;
-  background-color: #ACAA5F;
+nav .first.row :first-child {
+  background-color: #91b85f;
 }
-main#main section.content .body iframe {
-  margin: 0.7rem 0;
+nav .first.row :last-child {
+  background-color: #546135;
+}
+nav .second.row :first-child {
+  background-color: #546135;
+}
+nav .second.row :last-child {
+  background-color: #91b85f;
+}
+nav .nav-block {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: calc(50% - 5px);
+  padding: 2rem;
+  text-align: center;
+  height: calc(12rem + 1vh);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    font-size: 4.5vw;
+  }
+  nav .first.row, nav .second.row {
+    flex-direction: column;
+  }
+  nav .first.row :first-child, nav .second.row :first-child {
+    background-color: #91b85f;
+  }
+  nav .first.row :last-child, nav .second.row :last-child {
+    background-color: #546135;
+  }
+  nav .nav-block {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  footer {
+    font-size: 0.7rem;
+  }
+  footer span {
+    display: block;
+  }
+}
+@media screen and (max-width: 450px) {
+  main.content {
+    position: absolute;
+    margin: auto;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /*# sourceMappingURL=new.css.map */
