@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="normalize.css">
     <link rel="stylesheet" type="text/css" media="screen" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link href="/assets/font-awesome/css/fontawesome.min.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/5b20e0794d.js"></script>
 
     <title>Online Portfolio | Mikayla Lopez</title>
@@ -20,31 +20,31 @@
 <body>
     <div class="container main">
         <div class="row">
-            <div class="col-md-4 col-6">    
+            <div id="sidebar" class="col-md-4 col-12">    
                 <img class="sidebar-img" src="assets/thumbnail.png" />
-                <h3 class="sidebar">mikayla lopez</h3>
+                <h3 class="title">
+                    <span class="emoji">🌻</span>
+                    <span class="text">mikayla lopez</span></h3>
                 <p class="sidebar text">
-                   Software engineer and web developer. Graphic designer in hiatus, but still loves designing her oatmeal in the morning. Currently obsessed with matcha. 🍵
+                   Software engineer and web developer. Graphic designer on hiatus, but still loves designing her oatmeal in the morning. Currently obsessed with matcha. 🍵
                 </p>
                 
                 <h5 class="connect">Connect with me</h5>
-                <p class="sidebar text">
-                    <i class="fa fa-linkedin-square" aria-hidden="true"></i> <a href="https://bit.ly/mulopezlinkedin" alt="linkedin" title="Linkedin" target="_blank">mikayla-lopez</a><br>
-                    <i class="fa fa-github-alt" aria-hidden="true"></i> <a href="https://github.com/murkeirluh" alt="github" title="Github" target="_blank">murkeirluh</a><br>
-                    <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:mulopez@pm.me" alt="email" title="Email" target="_blank">mulopez@pm.me</a></a><br>
+                <p class="sidebar text connect">
+                    <span><i class="fa fa-linkedin-square" aria-hidden="true"></i> <a href="https://bit.ly/mulopezlinkedin" alt="linkedin" title="Linkedin" target="_blank">mikayla-lopez</a></span>
+                    
+                    <span><i class="fa fa-github-alt" aria-hidden="true"></i> <a href="https://github.com/murkeirluh" alt="github" title="Github" target="_blank">murkeirluh</a></span>
+                    <span><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:mulopez@pm.me" alt="email" title="Email" target="_blank">mulopez@pm.me</a></a></span>
                     <!-- <i class="fa fa-file" aria-hidden="true"></i> <a href="https://bit.ly/mulopezresumeB" alt="resume">resume</a> -->
                 </p>
                 <p></p>
-
-                
-
             </div>
             <div class="col-md-8 col-12 content">
                 <!-- <a href="/" class="header-title" title="Home"><h1>my works</h1></a> -->
-                <ul class="nav justify-content-center" role="tablist">
-                    <li class="nav-item">
+                <ul class="nav d-flex justify-content-center" role="tablist">
+                    <!-- <li class="nav-item">
                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" id="resume-tab" data-toggle="tab" href="#resume" role="tab" aria-controls="resume" aria-selected="false">Resume</a>
                     </li>
@@ -54,18 +54,21 @@
                     <li class="nav-item">
                         <a class="nav-link" id="software-tab" data-toggle="tab" href="#software" role="tab" aria-controls="software" aria-selected="false">Software</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item hidden">
                         <a class="nav-link" id="pubs-tab" data-toggle="tab" href="#pubs" role="tab" aria-controls="pubs" aria-selected="false">Publicity Materials</a>
+                    </li>
+                    <li class="nav-item pubs-shortened">
+                        <a class="nav-link" id="pubs-tab" data-toggle="tab" href="#pubs" role="tab" aria-controls="pubs" aria-selected="false">Pub Mats</a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <p class="intro">Hi! Welcome to my portfolio. Please select a category above to start browsing.</p>
-                            <!-- <p class="intro">
-                                <i class="fa fa-file" aria-hidden="true"></i>
-                                <a id="resume-tab" data-toggle="tab" href="#resume" role="tab" aria-controls="resume" aria-selected="false" onclick="$('#resume-tab').toggleClass('active')">View/download my resumé</a>
-                            </p> -->
-                        </div>
+                    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <p class="intro">Hi! Welcome to my portfolio. Please select a category above to start browsing.</p>
+                        <!-- <p class="intro">
+                            <i class="fa fa-file" aria-hidden="true"></i>
+                            <a id="resume-tab" data-toggle="tab" href="#resume" role="tab" aria-controls="resume" aria-selected="false" onclick="$('#resume-tab').toggleClass('active')">View/download my resumé</a>
+                        </p> -->
+                    </div>
 
             <!-- START WEB -->
                 <div class="tab-pane" id="webstuff" role="tabpanel" aria-labelledby="webstuff-tab">
@@ -73,7 +76,7 @@
                         
                         <!-- Dormmi  -->
                         <p></p>
-                        <img class="showcase toggler img-fluid" src="assets/screens/dormmi.png" data-toggle="modal" data-target="#dormmiModal" title="Dormmi | Click to enlarge" />
+                        <img class="showcase toggler img-fluid" src="/assets/screens/dormmi.png" data-toggle="modal" data-target="#dormmiModal" title="Dormmi | Click to enlarge" />
                         <ol class="post">
                             <li class="title"><h3 class="heading">Dormmi</h3></li>
                         </ol>   
@@ -101,7 +104,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <p class="modal-info">Dormmi landing page</p>
-                                    <img src="assets/screens/dormmi.png" class="d-block w-100" />
+                                    <img src="/assets/screens/dormmi.png" class="d-block w-100" />
                                 </div>
                             </div>
                             </div>
@@ -119,13 +122,13 @@
                             </ol>
                             <div class="carousel-inner toggler" data-toggle="modal" data-target="#apilladayModal" title="A Pill A Day | Click to enlarge">
                                 <div class="carousel-item active">
-                                    <img src="assets/screens/apilladay1.png" class="d-block w-100" alt="...">
+                                    <img src="/assets/screens/apilladay1.png" class="d-block w-100" alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="assets/screens/apilladay2.png" class="d-block w-100" alt="...">
+                                    <img src="/assets/screens/apilladay2.png" class="d-block w-100" alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="assets/screens/apilladay3.png" class="d-block w-100" alt="...">
+                                    <img src="/assets/screens/apilladay3.png" class="d-block w-100" alt="...">
                                 </div>
                             </div>
                         </div>
@@ -149,13 +152,13 @@
                                     </ol>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                        <img src="assets/screens/apilladay1.png" class="d-block w-100" alt="Landing/login page" />
+                                        <img src="/assets/screens/apilladay1.png" class="d-block w-100" alt="Landing/login page" />
                                         </div>
                                         <div class="carousel-item">
-                                        <img src="assets/screens/apilladay2.png" class="d-block w-100" alt="Dashboard - Patients" />
+                                        <img src="/assets/screens/apilladay2.png" class="d-block w-100" alt="Dashboard - Patients" />
                                         </div>
                                         <div class="carousel-item">
-                                        <img src="assets/screens/apilladay3.png" class="d-block w-100" alt="Dashboard - Prescriptions" />
+                                        <img src="/assets/screens/apilladay3.png" class="d-block w-100" alt="Dashboard - Prescriptions" />
                                         </div>
                                     </div>
                                     <a class="carousel-control-prev" href="#apilladay-main-carousel" role="button" data-slide="prev">
@@ -203,13 +206,13 @@
                         </ol>
                         <div class="carousel-inner toggler" data-toggle="modal" data-target="#medcenterModal" title="Click to enlarge">
                             <div class="carousel-item active">
-                                <img src="assets/screens/mcm2.png" class="d-block w-100" alt="Landing/login page" />
+                                <img src="/assets/screens/mcm2.png" class="d-block w-100" alt="Landing/login page" />
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/screens/mcm3.png" class="d-block w-100" alt="Dashboard" />
+                                <img src="/assets/screens/mcm3.png" class="d-block w-100" alt="Dashboard" />
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/screens/mcm4.png" class="d-block w-100" alt="Search" />
+                                <img src="/assets/screens/mcm4.png" class="d-block w-100" alt="Search" />
                             </div>
                         </div>
                     </div>
@@ -233,13 +236,13 @@
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="assets/screens/mcm2.png" class="d-block w-100" alt="Landing/login page" />
+                                        <img src="/assets/screens/mcm2.png" class="d-block w-100" alt="Landing/login page" />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/screens/mcm3.png" class="d-block w-100" alt="Dashboard" />
+                                        <img src="/assets/screens/mcm3.png" class="d-block w-100" alt="Dashboard" />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/screens/mcm4.png" class="d-block w-100" alt="Search" />
+                                        <img src="/assets/screens/mcm4.png" class="d-block w-100" alt="Search" />
                                     </div>
                                 </div>
                                 <a class="carousel-control-prev" href="#medcenter-main-carousel" role="button" data-slide="prev">
@@ -298,8 +301,8 @@
 
                     <div class="tab-pane" id="software" role="tabpanel" aria-labelledby="software-tab">
                         <!-- <p class="smoltext">Click any photo to enlarge it.</p> -->
-                        <div class="showcase">
-                            <iframe src="https://drive.google.com/file/d/1JEOIgQ2HDZgI5bX0p0Jp6PIAjrhMio7p/preview" width="590" height="332"></iframe>
+                        <div id="vr-showcase" class="showcase">
+                            <iframe src="https://drive.google.com/file/d/1JEOIgQ2HDZgI5bX0p0Jp6PIAjrhMio7p/preview" allow="autoplay"></iframe>
                         </div>
                         <p class="smoltext">VR Gameplay video</p>
                         <p></p>
@@ -309,9 +312,11 @@
                         <p class="deets">
                             <ul class="fa-ul">
                                 <li><span class="fa-li"><i class="fa fa-user" aria-hidden="true" alt="role" title="Role"></i></span><span title="Role">Researcher and developer</span></li>
-                                <li><span class="fa-li"><i class="fa fa-code" aria-hidden="true" alt="lang" title="Languages used"></i></span><span title="Languages used">C# (Unity)</span></li>
+                                <li><span class="fa-li"><i class="fa fa-code" aria-hidden="true" alt="lang" title="Languages used"></i></span><span title="Languages used">Unity/C#</span></li>
                                 <li><span class="fa-li"><i class="fa fa-calendar-o" aria-hidden="true" alt="date" title="Duration"></i></span><span title="Duration">September 2018 - May 2019</span></li>
-                                <li><span class="fa-li"><i class="fa fa-files-o" aria-hidden="true" alt="source" title="Paper/Source code"></i></span><a href="assets/lopez-valencia-paper.pdf" download="lopez-valencia-paper" title="Manuscript" target="_blank">Manuscript</a>&nbsp;&nbsp;/&nbsp;&nbsp;<strong><a href="https://github.com/murkeirluh/cs199-adaptivevr" title="Github repo" target="_blank">Source</a></strong></li>
+                                <li><span class="fa-li" ><i class="fa fa-files-o" aria-hidden="true" alt="source" title="Paper/Source code"></i></span><a href="/assets/lopez-valencia-paper.pdf" download="lopez-valencia-paper" title="Manuscript" target="_blank">Manuscript</a>
+                                    <span style="padding-bottom: 5px; border-bottom: 2px solid transparent">&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+                                    <a href="https://github.com/murkeirluh/cs199-adaptivevr" title="Github repo" target="_blank">Source</a></li>
                             </ul>
                         </p>
                         <p>A virtual reality application that simulates scenarios before and during a typhoon, and aims to teach best practices to follow when faced with hazards brought by typhoon flooding.</p>
@@ -330,16 +335,16 @@
                         </ol>
                         <div class="carousel-inner toggler" data-toggle="modal" data-target="#libraModal" title="Libra v. 2.0 | Click to enlarge">
                             <div class="carousel-item active">
-                                <img src="assets/screens/libra1.png" class="d-block w-100" alt="Landing screen" />
+                                <img src="/assets/screens/libra1.png" class="d-block w-100" alt="Landing screen" />
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/screens/libra2.png" class="d-block w-100" alt="Round setting confirmation screen" />
+                                <img src="/assets/screens/libra2.png" class="d-block w-100" alt="Round setting confirmation screen" />
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/screens/libra3.png" class="d-block w-100" alt="[Prefinal] Round 1 screen (1)" />
+                                <img src="/assets/screens/libra3.png" class="d-block w-100" alt="[Prefinal] Round 1 screen (1)" />
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/screens/libra4.png" class="d-block w-100" alt="[Prefinal] Round 1 screen (2)" />
+                                <img src="/assets/screens/libra4.png" class="d-block w-100" alt="[Prefinal] Round 1 screen (2)" />
                             </div>
                         </div>
                     </div>
@@ -364,16 +369,16 @@
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="assets/screens/libra1.png" class="d-block w-100" alt="Landing screen" />
+                                        <img src="/assets/screens/libra1.png" class="d-block w-100" alt="Landing screen" />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/screens/libra2.png" class="d-block w-100" alt="Round setting confirmation screen" />
+                                        <img src="/assets/screens/libra2.png" class="d-block w-100" alt="Round setting confirmation screen" />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/screens/libra3.png" class="d-block w-100" alt="[Prefinal] Round 1 screen (1)" />
+                                        <img src="/assets/screens/libra3.png" class="d-block w-100" alt="[Prefinal] Round 1 screen (1)" />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/screens/libra4.png" class="d-block w-100" alt="[Prefinal] Round 1 screen (2)" />
+                                        <img src="/assets/screens/libra4.png" class="d-block w-100" alt="[Prefinal] Round 1 screen (2)" />
                                     </div>
                                 </div>
                                 <a class="carousel-control-prev" href="#libra-main-carousel" role="button" data-slide="prev">
@@ -432,25 +437,25 @@
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="assets/pubs/apilladay.jpg" class="d-block w-100 toggler" alt="apilladaypub" data-toggle="modal" data-target="#apilladaypub" title="Click to enlarge" />
+                                        <img src="/assets/pubs/apilladay.jpg" class="d-block w-100 toggler" alt="apilladaypub" data-toggle="modal" data-target="#apilladaypub" title="Click to enlarge" />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/pubs/algo.png" class="d-block w-100 toggler" alt="algopub" data-toggle="modal" data-target="#algopub" title="Click to enlarge" />
+                                        <img src="/assets/pubs/algo.png" class="d-block w-100 toggler" alt="algopub" data-toggle="modal" data-target="#algopub" title="Click to enlarge" />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/pubs/recruitment1819.gif" class="d-block w-100 toggler" alt="recruitmentpub" data-toggle="modal" data-target="#recruitmentpub" title="Click to enlarge" />
+                                        <img src="/assets/pubs/recruitment1819.gif" class="d-block w-100 toggler" alt="recruitmentpub" data-toggle="modal" data-target="#recruitmentpub" title="Click to enlarge" />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/pubs/1day.png" class="d-block w-100 toggler" alt="onedaypub" data-toggle="modal" data-target="#onedaypub" title="Click to enlarge"  />
+                                        <img src="/assets/pubs/1day.png" class="d-block w-100 toggler" alt="onedaypub" data-toggle="modal" data-target="#onedaypub" title="Click to enlarge"  />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/pubs/2days.png" class="d-block w-100 toggler" alt="twodayspub" data-toggle="modal" data-target="#twodayspub" title="Click to enlarge" />
+                                        <img src="/assets/pubs/2days.png" class="d-block w-100 toggler" alt="twodayspub" data-toggle="modal" data-target="#twodayspub" title="Click to enlarge" />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/pubs/3days.png" class="d-block w-100 toggler" alt="threedayspub" data-toggle="modal" data-target="#threedayspub" title="Click to enlarge" />
+                                        <img src="/assets/pubs/3days.png" class="d-block w-100 toggler" alt="threedayspub" data-toggle="modal" data-target="#threedayspub" title="Click to enlarge" />
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/pubs/4days.png" class="d-block w-100 toggler" alt="fourdayspub" data-toggle="modal" data-target="#fourdayspub" title="Click to enlarge" />
+                                        <img src="/assets/pubs/4days.png" class="d-block w-100 toggler" alt="fourdayspub" data-toggle="modal" data-target="#fourdayspub" title="Click to enlarge" />
                                     </div>
 
                                 </div>
@@ -477,7 +482,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <p class="modal-info">A Pill A Day poster for our project's exhibit</p>
-                                            <img src="assets/pubs/apilladay.jpg" class="d-block w-100" alt="apilladaypub" />
+                                            <img src="/assets/pubs/apilladay.jpg" class="d-block w-100" alt="apilladaypub" />
                                         </div>
                                     </div>
                                 </div> 
@@ -495,7 +500,7 @@
                                             <h5 class="modal-info">ALGOLYMPICS 2019 main pub</h5>
                                             <p class="modal-info">Main pub for Algolympics - UP ACM's annual intercollegiate programming competition.<br>I functioned as Publicity Head for its 2018 run.
                                             </p>
-                                            <img src="assets/pubs/algo.png" class="d-block w-100" alt="algopub" />
+                                            <img src="/assets/pubs/algo.png" class="d-block w-100" alt="algopub" />
                                         </div>
                                     </div>
                                 </div> 
@@ -511,7 +516,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <p class="modal-info">UP ACM's main recruitment pub for AY 18-19, first semester.</p>
-                                            <img src="assets/pubs/recruitment1819.gif" class="d-block w-100" alt="recruitmentpub" />
+                                            <img src="/assets/pubs/recruitment1819.gif" class="d-block w-100" alt="recruitmentpub" />
                                         </div>
                                     </div>
                                 </div> 
@@ -527,7 +532,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <p class="modal-info">Countdown pub for UP ACM's recruitment, AY 17-18, first semester</p>
-                                            <img src="assets/pubs/1day.png" class="d-block w-100" alt="onedaypub" />
+                                            <img src="/assets/pubs/1day.png" class="d-block w-100" alt="onedaypub" />
                                         </div>
                                     </div>
                                 </div> 
@@ -543,7 +548,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <p class="modal-info">Countdown pub for UP ACM's recruitment, AY 17-18, first semester</p>
-                                            <img src="assets/pubs/2days.png" class="d-block w-100" alt="twodayspub" />
+                                            <img src="/assets/pubs/2days.png" class="d-block w-100" alt="twodayspub" />
                                         </div>
                                     </div>
                                 </div> 
@@ -559,7 +564,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <p class="modal-info">Countdown pub for UP ACM's recruitment, AY 17-18, first semester</p>
-                                            <img src="assets/pubs/3days.png" class="d-block w-100" alt="threedayspub" />
+                                            <img src="/assets/pubs/3days.png" class="d-block w-100" alt="threedayspub" />
                                         </div>
                                     </div>
                                 </div> 
@@ -575,7 +580,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <p class="modal-info">Countdown pub for UP ACM's recruitment, AY 17-18, first semester</p><p class="modal-info">A Pill A Day poster for our project's exhibit</p>
-                                            <img src="assets/pubs/4days.png" class="d-block w-100" alt="fourdayspub" />
+                                            <img src="/assets/pubs/4days.png" class="d-block w-100" alt="fourdayspub" />
                                         </div>
                                     </div>
                                 </div> 
@@ -588,15 +593,15 @@
                     <div class="tab-pane" id="resume" role="tabpanel" aria-labelledby="resume-tab">
                         <!-- <a class="back" href="#" onclick="$('#resume').toggleClass('active'); $('#home').toggleClass('active'); $('#webstuff-tab').removeClass('active'); $('#software-tab').removeClass('active');$('#pubs-tab').removeClass('active'); $('#home-tab').addClass('active');"><&nbsp;&nbsp;Back</a>
                         <br> -->
-                        <p class="download"><a class="btn btn-download" href="assets/resume.pdf" download="lopezmikayla-resume" role="button" target="_blank">Download</a></p>
-                        <iframe src="https://docs.google.com/document/d/e/2PACX-1vQJsDmit5NOWKhitmLg6dpLMHx6Ox2pagQfEJBqtNiEbpuJZorshhDZPhN1Pg9C8najUUQkjoieBgHW/pub?embedded=true" width="600"></iframe>
+                        <p class="download"><a class="btn btn-download" href="/assets/resume-2023.pdf" download="lopez-mikayla-resume-2023" role="button" target="_blank">Download</a></p>
+                        <embed src="/assets/resume-2023.pdf" type="application/pdf" style="height: 480px; width:100%">
                     </div>
                 </div>
                 
                 
             </div>
         </div>
-        <footer class="row footer">
+        <footer class="row">
             <p class="footer">© 2019 Mikayla Lopez. <br>Powered by <strong><i class="fa fa-github" aria-hidden="true"></i> Github</strong>.</p>
         </footer>
     </div>
