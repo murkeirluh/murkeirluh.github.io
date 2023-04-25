@@ -7,6 +7,8 @@
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="normalize.css">
     <link rel="stylesheet" type="text/css" media="screen" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
@@ -17,25 +19,19 @@
 
 <body>
     <div class="container main">
-        <div class="row header">
-            
-        </div>
         <div class="row">
             <div class="col-md-4 col-6">    
                 <img class="sidebar-img" src="assets/thumbnail.png" />
                 <h3 class="sidebar">mikayla lopez</h3>
                 <p class="sidebar text">
-                   BS Computer Science graduate from UP Diliman. Software and web developer, and sometimes a graphic designer. Also loves designing her oatmeal in the morning. Currently obsessed with matcha. 🍵
+                   Software engineer and web developer. Graphic designer in hiatus, but still loves designing her oatmeal in the morning. Currently obsessed with matcha. 🍵
                 </p>
                 
-                <p class="sidebar text">
-                        <i class="fa fa-file" aria-hidden="true"></i> <a id="resume-tab" data-toggle="tab" href="#resume" role="tab" aria-controls="resume" aria-selected="false" onclick="$('#resume-tab').toggleClass('active')">View/download my résumé</a><br>
-                    </p>
                 <h5 class="connect">Connect with me</h5>
                 <p class="sidebar text">
                     <i class="fa fa-linkedin-square" aria-hidden="true"></i> <a href="https://bit.ly/mulopezlinkedin" alt="linkedin" title="Linkedin" target="_blank">mikayla-lopez</a><br>
                     <i class="fa fa-github-alt" aria-hidden="true"></i> <a href="https://github.com/murkeirluh" alt="github" title="Github" target="_blank">murkeirluh</a><br>
-                    <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:mulopez@up.edu.ph" alt="email" title="Email" target="_blank">mulopez@up.edu.ph</a></a><br>
+                    <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:mulopez@pm.me" alt="email" title="Email" target="_blank">mulopez@pm.me</a></a><br>
                     <!-- <i class="fa fa-file" aria-hidden="true"></i> <a href="https://bit.ly/mulopezresumeB" alt="resume">resume</a> -->
                 </p>
                 <p></p>
@@ -44,10 +40,13 @@
 
             </div>
             <div class="col-md-8 col-12 content">
-                <a href="/" class="header-title" title="Home"><h1>my works</h1></a>
+                <!-- <a href="/" class="header-title" title="Home"><h1>my works</h1></a> -->
                 <ul class="nav justify-content-center" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="resume-tab" data-toggle="tab" href="#resume" role="tab" aria-controls="resume" aria-selected="false">Resume</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="webstuff-tab" data-toggle="tab" href="#webstuff" role="tab" aria-controls="webstuff" aria-selected="false">Web</a>
@@ -58,13 +57,14 @@
                     <li class="nav-item">
                         <a class="nav-link" id="pubs-tab" data-toggle="tab" href="#pubs" role="tab" aria-controls="pubs" aria-selected="false">Publicity Materials</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" id="projects-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="projects" aria-selected="false">Projects</a>
-                    </li> -->
                 </ul>
                 <div class="tab-content">
                         <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <p class="intro">Hi! Welcome to my portfolio. Please select a category above to start browsing.</p>
+                            <!-- <p class="intro">
+                                <i class="fa fa-file" aria-hidden="true"></i>
+                                <a id="resume-tab" data-toggle="tab" href="#resume" role="tab" aria-controls="resume" aria-selected="false" onclick="$('#resume-tab').toggleClass('active')">View/download my resumé</a>
+                            </p> -->
                         </div>
 
             <!-- START WEB -->
@@ -73,7 +73,7 @@
                         
                         <!-- Dormmi  -->
                         <p></p>
-                        <img class="showcase toggler" src="assets/screens/dormmi.png" data-toggle="modal" data-target="#dormmiModal" title="Dormmi | Click to enlarge" />
+                        <img class="showcase toggler img-fluid" src="assets/screens/dormmi.png" data-toggle="modal" data-target="#dormmiModal" title="Dormmi | Click to enlarge" />
                         <ol class="post">
                             <li class="title"><h3 class="heading">Dormmi</h3></li>
                         </ol>   
@@ -586,10 +586,10 @@
             
             <!-- RESUME -->
                     <div class="tab-pane" id="resume" role="tabpanel" aria-labelledby="resume-tab">
-                        <a class="back" href="#" onclick="$('#resume').toggleClass('active'); $('#home').toggleClass('active'); $('#webstuff-tab').removeClass('active'); $('#software-tab').removeClass('active');$('#pubs-tab').removeClass('active'); $('#home-tab').addClass('active');"><&nbsp;&nbsp;Back</a>
-                        <br>
+                        <!-- <a class="back" href="#" onclick="$('#resume').toggleClass('active'); $('#home').toggleClass('active'); $('#webstuff-tab').removeClass('active'); $('#software-tab').removeClass('active');$('#pubs-tab').removeClass('active'); $('#home-tab').addClass('active');"><&nbsp;&nbsp;Back</a>
+                        <br> -->
                         <p class="download"><a class="btn btn-download" href="assets/resume.pdf" download="lopezmikayla-resume" role="button" target="_blank">Download</a></p>
-                        <iframe src="https://drive.google.com/file/d/1_yR--8Ci02Sil6vWyGixCDAqYaT2Y9an/preview" width="600" height="480"></iframe>
+                        <iframe src="https://docs.google.com/document/d/e/2PACX-1vQJsDmit5NOWKhitmLg6dpLMHx6Ox2pagQfEJBqtNiEbpuJZorshhDZPhN1Pg9C8najUUQkjoieBgHW/pub?embedded=true" width="600"></iframe>
                     </div>
                 </div>
                 
