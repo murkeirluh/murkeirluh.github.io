@@ -23,12 +23,13 @@
 </head>
 
 <body class="flex flex-col min-h-screen box-border">
-    <header class="sticky left-0 top-0 right-0 pt-6 pb-10 z-20 bg-gradient-to-b from-white from-50%">
+    <div id="nav-background" class="fixed left-0 top-0 right-0 block h-[84px] z-10 bg-gradient-to-b from-white from-50%"></div>
+    <header class="sticky left-0 top-0 right-0 pt-6 pb-10 z-20 bg-transparent">
         <nav class="container mx-auto px-8 flex items-center justify-center space-x-6 text-paynes-gray md:space-x-8" role="tablist">
-            <a href="#hero" class="nav-item rounded-none hover:bg-mantis-light" role="tab" aria-controls="hero" id="hero-tab" aria-selected="true"><img src="assets/matcha.png" width="20"></a>
-            <a href="#about" class="nav-item rounded-none hover:bg-mantis-light hover:text-white" role="tab" aria-controls="about" id="about-tab" aria-selected="false">about</a>
-            <a href="#resume" class="nav-item rounded-none hover:bg-mantis-light hover:text-white" role="tab" aria-controls="resume" id="resume-tab" aria-selected="false">resume</a>
-            <a href="#works" class="nav-item rounded-none hover:bg-mantis-light hover:text-white" role="tab" aria-controls="works" id="works-tab" aria-selected="false">works</a>
+            <a href="#hero" class="nav-item rounded-none hover:bg-mantis-light" role="tab" aria-controls="hero" id="hero-tab" aria-selected="true" title="home"><img src="assets/matcha.png" width="20"></a>
+            <a href="#about" class="nav-item rounded-none hover:bg-mantis-light hover:text-white" role="tab" aria-controls="about" id="about-tab" aria-selected="false" title="about me">about</a>
+            <a href="#resume" class="nav-item rounded-none hover:bg-mantis-light hover:text-white" role="tab" aria-controls="resume" id="resume-tab" aria-selected="false" title="view my resume">resume</a>
+            <a href="#works" class="nav-item rounded-none hover:bg-mantis-light hover:text-white" role="tab" aria-controls="works" id="works-tab" aria-selected="false" title="view my works">works</a>
         </nav>
     </header>
 

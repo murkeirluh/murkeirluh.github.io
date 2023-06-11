@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const navBackground = document.querySelector('#nav-background');
+
+    changeBackgroundTo = (section) => {
+        const sectionColor = window.getComputedStyle(section).getPropertyValue('background-color');
+        navBackground.style.background = `linear-gradient(to bottom, ${sectionColor} 50%, transparent)`;
+    }
+
     navigate = (tab) => {
         const tabName = tab.getAttribute('href').substring(1);
         const tabContent = document.getElementById(tabName);
@@ -14,14 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
         tab.setAttribute('aria-selected', true);
 
         tabContent.scrollIntoView({ behavior: 'smooth' });
+        
+        changeBackgroundTo(tabContent);
     }
 
     const tabs = document.querySelectorAll('[role="tab"]');
 
     tabs.forEach((tab) => {
         tab.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent the default link behavior
-            navigate(this); // Activate the clicked tab
+            event.preventDefault();
+            navigate(this);
         });
     });
 
@@ -31,10 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
             tab.setAttribute('aria-selected', false);
         });
     }
-
-    const options = { 
-        threshold: 1
-    };
 
     // Intersection Observer for scrollspy
     const observer = new IntersectionObserver(
@@ -48,10 +53,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     correspondingTab.classList.add('active');
                     correspondingTab.setAttribute('aria-selected', true);
+                    
+                    const tabContent = document.querySelector(`#${targetTabName}`);
+                    changeBackgroundTo(tabContent);
                 }
             });
         },
-        options
+        { 
+            threshold: 0.85
+        }
     );
     
     const sections = document.querySelectorAll('section[role="tabpanel"]');

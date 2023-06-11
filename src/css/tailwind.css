@@ -562,3 +562,8 @@ a.nav-item:focus {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
+#nav-background {
+  transition: background 0.3s ease;
+  transition-delay: 3s;
+}
