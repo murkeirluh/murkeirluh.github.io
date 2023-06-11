@@ -1,1 +1,11 @@
+# ignore yarn lockfile
+yarn.lock
+
+# ignore yarn error log
+yarn-error.log
+
+# ignore yarn cache
+.yarn/cache
+.yarn/unplugged
+
 *.code-workspace

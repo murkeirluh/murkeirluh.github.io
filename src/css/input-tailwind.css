@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    :root {
+        --color-paynes-gray: #606871ff;
+        --color-mantis: #7EC082ff;
+        --color-mantis-light: #91CA95ff;
+        --color-honeydew: #E1EFE2ff;
+        --color-honeydew-light: #DBE8D9ff;
+        --color-matcha: #5C913B;
+        --color-matcha-ceremonial: #77B255;
+        --color-latte: #F6F3E2ff;
+    }
+
+    html,
+    body {
+        @apply font-sans bg-white;
+    }
+}
+
+a.nav-item {
+    @apply text-sm uppercase font-mono font-medium transition-all duration-200 rounded-none focus:outline-none;
+}
+
+.active, a.nav-item[aria-selected="true"], .activeNav {
+    @apply bg-[#91CA95ff] text-white;
+}

@@ -5,65 +5,82 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
 
-    <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-    <link rel="stylesheet" type="text/css" media="screen" href="index.css">
-    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+    <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <script src="https://twemoji.maxcdn.com/v/13.0.1/twemoji.min.js" integrity="sha384-5f4X0lBluNY/Ib4VhGx0Pf6iDCF99VGXJIyYy7dDLY5QlEd7Ap0hICSSZA1XYbc4" crossorigin="anonymous"></script>
 
-    <title>portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/css/tailwind.css">
+    <script src="src/js/tailwind.config.js" defer></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,600;1,700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <title>@lazymaplekoi</title>
 </head>
 
-<body>
-    <div class="content">
-        <img src="assets/twemoji/assets/svg/1f375.svg" width="120px" />
-        <h1 id="intro" class="pixel">whisking something new...</h1>
+<body class="flex flex-col min-h-screen box-border">
+    <header class="sticky left-0 top-0 right-0 pt-6 pb-10 z-20 bg-gradient-to-b from-white from-50%">
+        <nav class="container mx-auto px-8 flex items-center justify-center space-x-6 text-paynes-gray md:space-x-8" role="tablist">
+            <a href="#hero" class="nav-item rounded-none hover:bg-mantis-light" role="tab" aria-controls="hero" id="hero-tab" aria-selected="true"><img src="assets/matcha.png" width="20"></a>
+            <a href="#about" class="nav-item rounded-none hover:bg-mantis-light hover:text-white" role="tab" aria-controls="about" id="about-tab" aria-selected="false">about</a>
+            <a href="#resume" class="nav-item rounded-none hover:bg-mantis-light hover:text-white" role="tab" aria-controls="resume" id="resume-tab" aria-selected="false">resume</a>
+            <a href="#works" class="nav-item rounded-none hover:bg-mantis-light hover:text-white" role="tab" aria-controls="works" id="works-tab" aria-selected="false">works</a>
+        </nav>
+    </header>
 
-        <p>this space is still under renovation, but my previous works are available <a href="https://murkeirluh.github.io/init?utm_source=main">here</a>.</p>
+    <main id="matcha-content">
+        <section id="hero" class="relative bg-white mb-8 py-10 min-h-screen my-auto scroll-mt-16" role="tabpanel">
+            <div class="container mx-auto px-6 pt-12 md:px-20 text-left">
+                <div class="mb-4 font-heading font-bold tracking-tight text-5xl sm:text-6xl md:text-7xl">
+                    <h1 class="text-matcha-culinary">matcha</h1>
+                    <h1 class="italic text-honeydew">doin'here?</h1>
+                </div>
+                <p class="text-[0.8rem] text-paynes-gray font-normal font-mono uppercase tracking-wider sm:text-sm">
+                    Hi, I'm Mikayla, aka matcha.<br>
+                    <br>
+                    Software engineer by day for almost 4 years,<br>frontend dev at heart since 11 years old.<br>
+                    
+                </p>
+            </div>
+        </section>
 
-        <p>in the meantime, please ping me at:</p>
-        <div class="contact">
-            <span class="icon"><i class="fas fa-envelope"></i></span> mulopez (at) pm (dot) me
+        <section id="about" class="relative bg-latte mb-8 py-10 min-h-screen my-auto " role="tabpanel">
+            <div class="container mx-auto px-6 pt-12 md:px-20 text-center xs:text-center md:text-left">
+                <div class="font-heading font-bold text-matcha text-4xl tracking-tight">
+                    <h1 class="italic">about</h1>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="relative bg-white mb-8 py-10 min-h-screen my-auto " role="tabpanel">
+            <div class="container mx-auto px-6 pt-12 md:px-20 text-center xs:text-center md:text-left">
+                <div class="font-heading font-bold text-mantis text-4xl tracking-tight">
+                    <h1 class="italic">resume</h1>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="relative w-full bg-latte mb-8 py-10 min-h-screen my-auto " role="tabpanel">
+            <div class="container mx-auto px-6 pt-12 md:px-20 text-center xs:text-center md:text-left">
+                <div class="font-heading font-bold text-matcha text-4xl tracking-tight">
+                    <h1 class="italic">works</h1>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="relative w-full px-16 py-8 bg-white mx-auto mt-auto container text-center">
+        <div class="">
+            
         </div>
-
-        <br> -----
-        <br>
-        <p><a href="/assets/resume-2023.pdf" target="_blank">looking for my resume?</a></p>
-    </div>
-
-    <footer>
-        <div>
-            &#169; 2021 <a class="obscure" href="https://www.instagram.com/matchadoinhere_/" target="_blank"><i class="fab fa-instagram share"></i></a><br> emoji: <a href="https://twemoji.twitter.com/">twemoji</a> / icon: <a href="https://fontawesome.com/">font awesome</a><br>
-
-        </div>
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a matcha', '#91ca95', 'Z8Z5F3D4Q');kofiwidget2.draw();</script> 
+        
+        <h6 class="mt-2 text-center text-xs text-paynes-gray font-sans uppercase">&#169; 2023 lazymaplekoi</h6>
     </footer>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
-
-    <script type="text/javascript ">
-        randomize_intro = () => {
-            var intros = [
-                'whisking something new...',
-                'whisking whimsically',
-                'oops, still brewing!',
-                'whisky business still ongoing',
-                'still sifting...',
-                'something new is brewing here',
-                'matcha doin\' here?'
-            ];
-
-            let random = Math.floor(Math.random() * intros.length);
-
-            $('#intro').text(intros[random]);
-        }
-
-        randomize_intro();
-    </script>
 
     <!-- Statcounter -->
     <script type="text/javascript ">
@@ -71,8 +88,7 @@
         var sc_invisible = 1;
         var sc_security = "1b92e4f3 ";
     </script>
-    <script type="text/javascript " src="https://www.statcounter.com/counter/counter.js " async>
-    </script>
+    <script type="text/javascript " src="https://www.statcounter.com/counter/counter.js " async></script>
+    <script src="src/js/index.js"></script>
 </body>
-
 </html>
