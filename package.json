@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "http-server -o"
+        "start": "http-server -o",
+        "watch:css": "npx tailwindcss -i src/css/input-tailwind.css -o src/css/tailwind.css --watch"
     },
     "keywords": [],
     "author": "",

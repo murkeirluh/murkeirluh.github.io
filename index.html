@@ -11,9 +11,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="src/css/tailwind.css">
-    <script src="src/js/tailwind.config.js" defer></script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +22,9 @@
 </head>
 
 <body class="flex flex-col min-h-screen box-border">
-    <div id="nav-background" class="fixed left-0 top-0 right-0 block h-[84px] z-10 bg-gradient-to-b from-white from-50%"></div>
+    <div id="nav-background" class="fixed left-0 top-0 right-0 block h-[84px] z-10 bg-gradient-to-b from-white from-50% bg-transparent"></div>
     <header class="sticky left-0 top-0 right-0 pt-6 pb-10 z-20 bg-transparent">
-        <nav class="container mx-auto px-8 flex items-center justify-center space-x-6 text-paynes-gray md:space-x-8" role="tablist">
+        <nav class="container mx-auto flex items-center justify-center space-x-6 text-paynes-gray md:space-x-8" role="tablist">
             <a href="#hero" class="nav-item rounded-none hover:bg-mantis-light" role="tab" aria-controls="hero" id="hero-tab" aria-selected="true" title="home"><img src="assets/matcha.png" width="20"></a>
             <a href="#about" class="nav-item rounded-none hover:bg-mantis-light hover:text-white" role="tab" aria-controls="about" id="about-tab" aria-selected="false" title="about me">about</a>
             <a href="#resume" class="nav-item rounded-none hover:bg-mantis-light hover:text-white" role="tab" aria-controls="resume" id="resume-tab" aria-selected="false" title="view my resume">resume</a>
@@ -49,26 +48,62 @@
             </div>
         </section>
 
+        <!-- about -->
         <section id="about" class="relative bg-latte mb-8 py-10 min-h-screen my-auto " role="tabpanel">
-            <div class="container mx-auto px-6 pt-12 md:px-20 text-center xs:text-center md:text-left">
-                <div class="font-heading font-bold text-matcha text-4xl tracking-tight">
-                    <h1 class="italic">about</h1>
+            <div class="container mx-auto px-6 pt-12 md:px-20 text-center xs:text-center lg:text-left">
+                <div class="mb-4">
+                    <h1 class="font-heading font-bold text-matcha text-4xl tracking-tight italic">about</h1>
+                </div>
+
+                <div class="flex flex-col items-center sm:flex-row gap-6 py-10 text-center xs:text-center md:text-left">
+                    <div class="relative flex-shrink-0">
+                        <img src="assets/photo.jpg" alt="me" class="rounded-full" width="200" />
+                    </div>
+
+                    <div class="relative">
+                        <h3 class="text-2xl font-heading font-extrabold text-matcha">Mikayla Lopez</h3>
+                        <p class="font-normal font-mono sm:text-sm pt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a justo non metus malesuada lobortis quis sed mauris. Nunc tincidunt ex nisi, finibus posuere mi ullamcorper eget. Nulla in nisl at dui interdum volutpat. Mauris sed quam sed neque dignissim blandit eu in enim. Suspendisse in risus sit amet nisi elementum consequat non et lorem. Integer nec mollis metus, vitae maximus ex. Vestibulum venenatis sit amet ante ut suscipit. Vestibulum ullamcorper id sem vitae dictum. Nullam eleifend feugiat sem, mollis laoreet turpis luctus eu. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- resume -->
+        <section id="resume" class="relative bg-white mb-8 py-10 min-h-screen my-auto" role="tabpanel">
+            <div class="container mx-auto px-6 pt-12 md:px-20 text-center xs:text-center lg:text-left">
+                <div class="mb-4">
+                    <h1 class="font-heading font-bold text-mantis text-4xl tracking-tight italic">resume</h1>
+                </div>
+
+                <div class="relative flex flex-col items-center py-10 overflow-auto">
+                    <div class="relative pb-10">
+                        <p class="sm:text-sm mb-6">
+                            Below is a brief overview of my skills and experiences. My current tech stack is <span class="text-mantis">.NET/C#</span>, <span class="text-mantis">Javascript</span>, and <span class="text-mantis">SQL</span> (<span class="text-mantis">Microsoft SQL Server/PostgreSQL</span>).
+                            I have previously worked with <span class="text-mantis">Ruby on Rails</span> and developed personal projects using <span class="text-mantis">Python/Django</span>.
+                            
+                            Others that I've used in past projects include <span class="text-mantis">PHP</span>, via <span class="text-mantis">Laravel</span> and <span class="text-mantis">Wordpress</span>.
+                            <br><br>
+                            I'm currently immersing myself more in frontend development to expand my stack and skillset, using <span class="text-mantis">VueJS</span> and <span class="text-mantis">Tailwind</span>, and looking to take a deeper dive into <span class="text-mantis">UI/UX design</span>.
+                        </p>
+                        <p class="sm:text-sm">
+                            Think I'm a good fit for a role, or have any questions for me? Let's talk! Shoot me a message at: 
+                            <a class="text-mantis hover:underline" href="mailto:mulopez@pm.me">mulopez (at) pm (dot) me</a>
+                        </p>
+                    </div>
+
+                    <a class="btn-download" href="assets/resume-2023.pdf" download="lopez-mikayla-resume-2023" role="button" target="_blank">Download PDF</a>
+                    <embed class="my-4 w-full min-h-screen border-honeydew-light hover:border-mantis-light border-4" src="assets/resume-2023.pdf" type="application/pdf">
                 </div>
             </div>
         </section>
 
-        <section id="resume" class="relative bg-white mb-8 py-10 min-h-screen my-auto " role="tabpanel">
-            <div class="container mx-auto px-6 pt-12 md:px-20 text-center xs:text-center md:text-left">
-                <div class="font-heading font-bold text-mantis text-4xl tracking-tight">
-                    <h1 class="italic">resume</h1>
-                </div>
-            </div>
-        </section>
-
+        <!-- works -->
         <section id="works" class="relative w-full bg-latte mb-8 py-10 min-h-screen my-auto " role="tabpanel">
-            <div class="container mx-auto px-6 pt-12 md:px-20 text-center xs:text-center md:text-left">
-                <div class="font-heading font-bold text-matcha text-4xl tracking-tight">
-                    <h1 class="italic">works</h1>
+            <div class="container mx-auto px-6 pt-12 md:px-20 text-center xs:text-center lg:text-left">
+                <div class="mb-4">
+                    <h1 class="font-heading font-bold text-matcha text-4xl tracking-tight italic">works</h1>
                 </div>
             </div>
         </section>
@@ -84,12 +119,12 @@
     </footer>
 
     <!-- Statcounter -->
-    <script type="text/javascript ">
+    <!-- <script type="text/javascript ">
         var sc_project = 12050475;
         var sc_invisible = 1;
         var sc_security = "1b92e4f3 ";
     </script>
-    <script type="text/javascript " src="https://www.statcounter.com/counter/counter.js " async></script>
+    <script type="text/javascript " src="https://www.statcounter.com/counter/counter.js " async></script> -->
     <script src="src/js/index.js"></script>
 </body>
 </html>

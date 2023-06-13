@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+@layer base {
     :root {
         --color-paynes-gray: #606871ff;
         --color-mantis: #7EC082ff;
@@ -16,19 +16,33 @@
 
     html,
     body {
-        @apply font-sans bg-white;
+        @apply font-mono bg-white text-neutral-700;
+    }
+
+    p {
+        @apply text-[0.8rem];
     }
 }
 
-a.nav-item {
-    @apply text-sm uppercase font-mono font-medium transition-all duration-200 rounded-none focus:outline-none;
-}
+@layer components {
+    a.nav-item {
+        @apply text-sm uppercase font-mono font-medium transition-all duration-200 rounded-none focus:outline-none;
+    }
 
-.active, a.nav-item[aria-selected="true"], .activeNav {
-    @apply bg-[#91CA95ff] text-white;
-}
+    .active, a.nav-item[aria-selected="true"] {
+        @apply bg-mantis-light text-white;
+    }
 
-#nav-background {
-    transition: background 0.3s ease;
-    transition-delay: 3s;
+    #nav-background {
+        transition: background 0.5s ease;
+        transition-delay: 4s;
+    }
+
+    .font-heading {
+        @apply lowercase;
+    }
+
+    .btn-download {
+        @apply font-sans text-white bg-mantis hover:bg-mantis-light focus:outline-none focus:ring-1 focus:ring-mantis-light font-medium rounded-full text-base px-5 py-2.5 text-center mr-2 mb-2;
+    }
 }

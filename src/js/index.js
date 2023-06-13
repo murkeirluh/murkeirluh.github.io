@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navBackground = document.querySelector('#nav-background');
+    const sections = document.querySelectorAll('section[role="tabpanel"]');
 
     changeBackgroundTo = (section) => {
         const sectionColor = window.getComputedStyle(section).getPropertyValue('background-color');
@@ -41,6 +42,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const getActiveSection = () => {
+        let maxSection = sections[0];
+        let maxSectionHeight = 0;
+    
+        sections.forEach((section) => {
+            const sectionHeight = section.getBoundingClientRect().height;
+            const sectionTop = section.getBoundingClientRect().top;
+      
+            if (sectionTop >= 0 && sectionTop < window.innerHeight && sectionHeight > maxSectionHeight) {
+              maxSectionHeight = sectionHeight;
+              maxSection = section;
+            }
+        });
+    
+        return maxSection;
+      };
+
     // Intersection Observer for scrollspy
     const observer = new IntersectionObserver(
         (entries) => {
@@ -60,14 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         },
         { 
-            threshold: 0.85
+            threshold: 0.8
         }
     );
     
-    const sections = document.querySelectorAll('section[role="tabpanel"]');
-        sections.forEach((section) => {
-            observer.observe(section);
+    sections.forEach((section) => {
+        observer.observe(section);
     });
+
+    const activeSection = getActiveSection();
+    changeBackgroundTo(activeSection);
 });
   
 
