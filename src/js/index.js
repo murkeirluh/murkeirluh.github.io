@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     changeBackgroundTo = (section) => {
         const sectionColor = window.getComputedStyle(section).getPropertyValue('background-color');
+
         navBackground.style.background = `linear-gradient(to bottom, ${sectionColor} 50%, transparent)`;
     }
 
@@ -11,12 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const tabName = tab.getAttribute('href').substring(1);
         const tabContent = document.getElementById(tabName);
 
-        const allTabs = document.querySelectorAll('[role="tab"]');
-        
-        allTabs.forEach((t) => {
-            t.classList.remove('active');
-            t.setAttribute('aria-selected', false);
-        });
+        deactivateTabs();
         
         tab.classList.add('active');
         tab.setAttribute('aria-selected', true);
@@ -35,6 +31,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    getSectionTab = (section) => {
+        let sectionId = section.getAttribute('id');
+
+        return document.getElementById(`${sectionId}-tab`);
+    }
+
+    activateTab = (tab) => {
+        deactivateTabs();
+
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', true);
+        
+        const tabContent = document.querySelector(`section#${tab.getAttribute('aria-controls')}`);
+        changeBackgroundTo(tabContent);
+    }
+
     deactivateTabs = () => {
         tabs.forEach((tab) => {
             tab.classList.remove('active');
@@ -43,20 +55,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const getActiveSection = () => {
-        let maxSection = sections[0];
-        let maxSectionHeight = 0;
-    
+        let activeSection = sections[0];
         sections.forEach((section) => {
-            const sectionHeight = section.getBoundingClientRect().height;
-            const sectionTop = section.getBoundingClientRect().top;
-      
-            if (sectionTop >= 0 && sectionTop < window.innerHeight && sectionHeight > maxSectionHeight) {
-              maxSectionHeight = sectionHeight;
-              maxSection = section;
+            const sectionRect = section.getBoundingClientRect();
+
+            if (sectionRect.top >= 0 && sectionRect.top < window.innerHeight) {
+                activeSection = section;
+                activateTab(getSectionTab(section));
+                return;
             }
         });
-    
-        return maxSection;
+
+        return activeSection;
       };
 
     // Intersection Observer for scrollspy
@@ -67,18 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const correspondingTab = document.querySelector(`[href="#${targetTabName}"]`);
                 
                 if (entry.isIntersecting) {
-                    deactivateTabs();
-
-                    correspondingTab.classList.add('active');
-                    correspondingTab.setAttribute('aria-selected', true);
-                    
-                    const tabContent = document.querySelector(`#${targetTabName}`);
-                    changeBackgroundTo(tabContent);
+                    activateTab(correspondingTab);
                 }
             });
         },
         { 
-            threshold: 0.8
+            threshold: 0.45
         }
     );
     

@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+          'white': '#FBFBFB',
           'paynes-gray': '#606871ff',
           'mantis': {
               light: '#91CA95ff',
@@ -15,11 +16,12 @@ module.exports = {
           'matcha': {
               ceremonial: '#77B255',
               culinary: '#5C913B',
-              DEFAULT: '#5C913B'
+              DEFAULT: '#7AB692'
           },
           'latte': '#F6F3E2ff',
           'honeydew': {
               light: '#DBE8D9ff',
+              // DEFAULT: '#DBF6C8'
               DEFAULT: '#E1EFE2ff'
           }
       },

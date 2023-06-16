@@ -30,7 +30,7 @@
     }
 
     .active, a.nav-item[aria-selected="true"] {
-        @apply bg-mantis-light text-white;
+        @apply bg-matcha text-white;
     }
 
     #nav-background {
