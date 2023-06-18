@@ -22,34 +22,44 @@
 </head>
 <body class="flex flex-col min-h-screen box-border scroll-smooth">
     <div id="nav-background" class="fixed left-0 top-0 right-0 block h-[84px] bg-z-10 bg-gradient-to-b from-latte from-50%"></div>
-    <header class="sticky left-0 top-0 right-0 pt-6 pb-4 md:pb-8 z-20 bg-latte">
+    <header class="sticky left-0 top-0 right-0 pt-6 pb-10 md:pb-8 z-20 bg-latte">
         <nav class="container mx-auto flex items-center justify-center space-x-6 text-paynes-gray md:space-x-8" role="tablist">
-            <a href="/#hero" class="nav-item" role="tab" aria-controls="hero" id="hero-tab" aria-selected="false" title="home"><img src="/assets/matcha/32x32-t.png" width="28" class="p-[2px]"></a>
-            <a href="/#about" class="nav-item hidden xs:flex" role="tab" aria-controls="about" id="about-tab" aria-selected="false" title="about me">about</a>
-            <a href="/#resume" class="nav-item hidden xs:flex" role="tab" aria-controls="resume" id="resume-tab" aria-selected="false" title="view my resume">resume</a>
+            <a href="/" class="nav-item" aria-selected="false" title="home"><img src="/assets/matcha/32x32-t.png" width="28" class="p-[2px]"></a>
+            <a href="/#about" class="nav-item hidden xs:flex" title="about me">about</a>
+            <a href="/#resume" class="nav-item hidden xs:flex" title="view my resume">resume</a>
             <a href="#index" class="nav-item active" role="tab" aria-controls="works" id="works-tab" aria-selected="false" title="view my works">works <i class="fa-solid fa-arrow-down"></i></a>
         </nav>
         <nav class="flex w-[184px] max-w-[278px] mx-auto items-center justify-center xs:justify-end space-x-4 mt-3 text-paynes-gray xs:w-[254px] lg:w-[278px]" role="tablist">
-            <a href="#" class="sub-nav-item active px-1" role="tab" aria-controls="index" id="index-tab" aria-selected="true" title="index">#</a>
+            <a href="#index" class="sub-nav-item active px-1" role="tab" aria-controls="index" id="index-tab" aria-selected="true" title="index">#</a>
             <a href="#web" class="sub-nav-item" role="tab" aria-controls="web" id="web-tab" aria-selected="false" title="web">web</a>
             <a href="#software" class="sub-nav-item" role="tab" aria-controls="software" id="software-tab" aria-selected="false" title="software">software</a>
             <a href="#misc" class="sub-nav-item" role="tab" aria-controls="misc" id="misc-tab" aria-selected="false" title="misc">misc</a>
         </nav>
     </header>
 
-    <main id="work-content" class="relative w-full bg-latte ">
-        <!-- heading -->
-        <section id="heading" class="pt-5 sticky left-0 right-0 top-0">
+    <main id="work-content" class="relative w-full bg-latte">
+        <!-- works: index -->
+        <section id="index" class="mb-8 pb-10 min-h-screen my-auto scroll-mt-28" role="tabpanel">
             <div class="container mx-auto px-6 md:px-20 text-center xs:text-center lg:text-left">
-                <h1 class="font-heading font-bold text-matcha text-4xl tracking-tight italic">works</h1>
+                <div class="mb-4">
+                    <h1 class="font-heading font-bold text-matcha text-4xl tracking-tight italic">works</h1>
+                    <h4 class="font-mono uppercase text-paynes-gray text-xl tracking-tight">index</h1>
+                </div>
+                <div class="relative">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a justo non metus malesuada lobortis quis sed mauris. Nunc tincidunt ex nisi, finibus posuere mi ullamcorper eget. Nulla in nisl at dui interdum volutpat. Mauris sed quam sed neque dignissim blandit eu in enim. Suspendisse in risus sit amet nisi elementum consequat non et lorem. Integer nec mollis metus, vitae maximus ex. Vestibulum venenatis sit amet ante ut suscipit. Vestibulum ullamcorper id sem vitae dictum. Nullam eleifend feugiat sem, mollis laoreet turpis luctus eu.</p>
+                </div>
             </div>
         </section>
 
-        <!-- works: index -->
-        <section id="index" class="mb-8 pt-0 pb-10 min-h-screen my-auto" role="tabpanel">
+        <!-- works: web -->
+        <section id="web" class="mb-8 pb-10 min-h-screen my-auto scroll-mt-28" role="tabpanel">
             <div class="container mx-auto px-6 md:px-20 text-center xs:text-center lg:text-left">
                 <div class="mb-4">
-                    <h4 class="font-mono uppercase text-paynes-gray text-xl tracking-tight">index</h1>
+                    <h1 class="font-heading font-bold text-matcha text-4xl tracking-tight italic">works</h1>
+                    <h4 class="font-mono uppercase text-paynes-gray text-xl tracking-tight">web</h1>
+                </div>
+                <div class="relative">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a justo non metus malesuada lobortis quis sed mauris. Nunc tincidunt ex nisi, finibus posuere mi ullamcorper eget. Nulla in nisl at dui interdum volutpat. Mauris sed quam sed neque dignissim blandit eu in enim. Suspendisse in risus sit amet nisi elementum consequat non et lorem. Integer nec mollis metus, vitae maximus ex. Vestibulum venenatis sit amet ante ut suscipit. Vestibulum ullamcorper id sem vitae dictum. Nullam eleifend feugiat sem, mollis laoreet turpis luctus eu.</p>
                 </div>
             </div>
         </section>
@@ -61,5 +71,7 @@
         
         <h6 class="mt-2 text-center text-xs text-paynes-gray font-sans uppercase">&#169; 2023 lazymaplekoi</h6>
     </footer>
+
+    <script src="/src/js/works.js" type="module"></script>
 </body>
 </html>
