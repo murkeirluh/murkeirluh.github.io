@@ -9,3 +9,5 @@ yarn-error.log
 .yarn/unplugged
 
 *.code-workspace
+node_modules/
+node_modules/.bin/*
