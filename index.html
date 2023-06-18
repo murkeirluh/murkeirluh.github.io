@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="assets/favicon.png">
 
-    <!-- FontAwesome CSS -->
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"> -->
-
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="src/css/tailwind.css">
 
@@ -18,6 +15,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,600;1,700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/53addacec0.js" crossorigin="anonymous"></script>
+    
     <title>@lazymaplekoi</title>
 </head>
 
@@ -25,10 +25,11 @@
     <div id="nav-background" class="fixed left-0 top-0 right-0 block h-[84px] z-10 bg-gradient-to-b from-white from-50% bg-transparent"></div>
     <header class="sticky left-0 top-0 right-0 pt-6 pb-10 z-20 bg-transparent">
         <nav class="container mx-auto flex items-center justify-center space-x-6 text-paynes-gray md:space-x-8" role="tablist">
-            <a href="#hero" class="nav-item rounded-none hover:bg-mantis-light" role="tab" aria-controls="hero" id="hero-tab" aria-selected="true" title="home"><img src="assets/matcha.png" width="20"></a>
-            <a href="#about" class="nav-item rounded-none hover:bg-mantis-light hover:text-white" role="tab" aria-controls="about" id="about-tab" aria-selected="false" title="about me">about</a>
-            <a href="#resume" class="nav-item rounded-none hover:bg-mantis-light hover:text-white" role="tab" aria-controls="resume" id="resume-tab" aria-selected="false" title="view my resume">resume</a>
-            <a href="#works" class="nav-item rounded-none hover:bg-mantis-light hover:text-white" role="tab" aria-controls="works" id="works-tab" aria-selected="false" title="view my works">works</a>
+            <a href="#hero" class="nav-item" role="tab" aria-controls="hero" id="hero-tab" aria-selected="true" title="home"><img src="assets/matcha/32x32-t.png" width="28" class="p-[2px]"></a>
+            <a href="#about" class="nav-item hover:text-white" role="tab" aria-controls="about" id="about-tab" aria-selected="false" title="about me">about</a>
+            <a href="#resume" class="nav-item " role="tab" aria-controls="resume" id="resume-tab" aria-selected="false" title="view my resume">resume</a>
+            <!-- <a href="#works" class="nav-item hover:text-white" role="tab" aria-controls="works" id="works-tab" aria-selected="false" title="view my works">works</a> -->
+            <a href="/works" class="nav-item hover:text-white" title="view my works">works <i class="fa-solid fa-arrow-right"></i></a>
         </nav>
     </header>
 
@@ -95,7 +96,7 @@
                             I'm currently immersing myself more in frontend development to expand my stack and skillset, using <span class="text-mantis">VueJS</span> and <span class="text-mantis">Tailwind</span>, and looking to take a deeper dive into <span class="text-mantis">UI/UX design</span>.
                         </p>
                         <p class="sm:text-sm">
-                            Think I'm a good fit for a role, or have any questions for me? Let's talk! Shoot me a message at: 
+                            <br>Think I'm a good fit for a role, or have any questions for me? Let's talk! Shoot me a message at: 
                             <a class="text-mantis hover:underline" href="mailto:mulopez@pm.me">mulopez (at) pm (dot) me</a>
                         </p>
                     </div>
@@ -105,21 +106,9 @@
                 </div>
             </div>
         </section>
-
-        <!-- works -->
-        <section id="works" class="relative w-full bg-latte mb-8 py-10 min-h-screen my-auto " role="tabpanel">
-            <div class="container mx-auto px-6 pt-12 md:px-20 text-center xs:text-center lg:text-left">
-                <div class="mb-4">
-                    <h1 class="font-heading font-bold text-matcha text-4xl tracking-tight italic">works</h1>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="relative w-full px-16 py-8 bg-white mx-auto mt-auto container text-center">
-        <div class="">
-            
-        </div>
         <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a matcha', '#91ca95', 'Z8Z5F3D4Q');kofiwidget2.draw();</script> 
         
         <h6 class="mt-2 text-center text-xs text-paynes-gray font-sans uppercase">&#169; 2023 lazymaplekoi</h6>

@@ -1,8 +1,12 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     './index.html',
-    './*.{html,js}',
-    './**/*.{html,js}',
+    './**/index.html',
+    // './*.{html,js}',
+    // './**/*.{html,js}',
+    './node_modules/flowbite/**/*.js'
   ],
   theme: {
     extend: {
@@ -30,6 +34,10 @@ module.exports = {
           heading: ['Poppins', 'Inter', 'sans-serif'],
           mono: ['Roboto Mono', 'monospace']
       }
-    }
+    },
+    screens: {
+      'xs': '320px',
+      ...defaultTheme.screens,
+    },
 }
 }

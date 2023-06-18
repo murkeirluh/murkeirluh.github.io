@@ -26,11 +26,19 @@
 
 @layer components {
     a.nav-item {
-        @apply text-sm uppercase font-mono font-medium transition-all duration-200 rounded-none focus:outline-none;
+        @apply text-sm uppercase font-mono font-medium transition-all duration-200 rounded-none focus:outline-none hover:bg-mantis-light hover:text-white;
     }
 
-    .active, a.nav-item[aria-selected="true"] {
-        @apply bg-matcha text-white;
+    a.sub-nav-item {
+        @apply text-xs lowercase font-mono font-medium transition-all tracking-tight rounded-none border-b-4 border-transparent focus:outline-none hover:border-mantis-light hover:border-b-4;
+    }
+
+    a.nav-item.active, a.nav-item[aria-selected="true"] {
+        @apply bg-mantis-light text-white;
+    }
+
+    a.sub-nav-item.active {
+        @apply border-b-4 border-mantis-light;
     }
 
     #nav-background {
