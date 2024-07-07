@@ -26,7 +26,7 @@
     <header class="sticky left-0 top-0 right-0 pt-6 pb-10 z-20 bg-transparent">
         <nav class="container mx-auto flex items-center justify-center space-x-6 text-paynes-gray md:space-x-8" role="tablist">
             <a href="#hero" class="nav-item" role="tab" aria-controls="hero" id="hero-tab" aria-selected="true" title="home"><img src="assets/matcha/32x32-t.png" width="28" class="p-[2px]"></a>
-            <a href="#about" class="nav-item hover:text-white" role="tab" aria-controls="about" id="about-tab" aria-selected="false" title="about me">about</a>
+            <!-- <a href="#about" class="nav-item hover:text-white" role="tab" aria-controls="about" id="about-tab" aria-selected="false" title="about me">about</a> -->
             <a href="#resume" class="nav-item " role="tab" aria-controls="resume" id="resume-tab" aria-selected="false" title="view my resume">resume</a>
             <!-- <a href="#works" class="nav-item hover:text-white" role="tab" aria-controls="works" id="works-tab" aria-selected="false" title="view my works">works</a> -->
             <a href="/works" class="nav-item hover:text-white" title="view my works">works <i class="fa-solid fa-arrow-right"></i></a>
@@ -35,40 +35,43 @@
 
     <main id="matcha-content">
         <section id="hero" class="relative bg-white mb-8 py-10 min-h-screen my-auto scroll-mt-16" role="tabpanel">
-            <div class="max-w-screen-lg flex flex-col sm:flex-row items-center justify-between space-x-0 space-y-10 md:space-x-6 md:space-y-0 mx-auto px-8 pt-12 sm:px-10 md:px-12 lg:px-20 text-left">
+            <div class="max-w-screen-lg flex flex-col sm:flex-row items-center justify-between space-x-0 space-y-10 md:space-x-6 md:space-y-0 mx-auto px-8 pt-12 sm:px-20 md:px-12 text-center sm:text-center md:text-left">
                 <div class="col">
-                    <div class="mb-4 font-heading font-bold tracking-tight text-5xl md:text-6xl lg:text-7xl">
-                        <h1 class="text-matcha-culinary">matcha</h1>
+                    <div class="mb-6 font-heading font-bold tracking-tight text-5xl md:text-6xl lg:text-7xl">
+                        <h1 class="text-mantis">matcha</h1>
                         <h1 class="italic text-honeydew">doin'here?</h1>
                     </div>
-                    <p class="text-[0.8rem] text-paynes-gray font-normal font-mono uppercase tracking-wider sm:text-sm">
-                        Hi, I'm Mikayla, aka matcha.<br>
+                    <p class="text-sm text-paynes-gray font-normal font-mono lowercase tracking-wider sm:text-sm md:text-base">
+                        Hi, I'm Mikayla, aka matcha (on some parts of the internet.)<br>
                         <br>
-                        Here, have a cup while you look around.
+                        <!-- Here, have a cup while you look around. -->
+                        I'm a software engineer slash web developer based in the Philippines. 
+                    </p>
+                    <p class="mt-12 text-2xl text-paynes-gray font-normal font-mono lowercase tracking-widest">
+                        <a href="https://www.linkedin.com/in/mikayla-lopez/" target="_blank" title="Linkedin" class="text-mantis hover:text-honeydew"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/murkeirluh/" target="_blank" title="Github" class="text-mantis hover:text-honeydew"><i class="fa-brands fa-github"></i></a>
+                        <a href="mailto:mulopez@pm.me" target="_blank" title="Email" class="text-mantis hover:text-honeydew"><i class="fa-solid fa-envelope"></i></a>
+                        
                     </p>
                 </div>
                 
-                <div class="flex text-center justify-center">
+                <!-- <div class="flex text-center justify-center">
                     <img src="assets/matcha/128x128.png" width="300" />
-                </div>
+                </div> -->
             </div>
         </section>
 
         <!-- about -->
-        <section id="about" class="relative bg-latte mb-8 py-10 min-h-screen my-auto " role="tabpanel">
-            <div class="container mx-auto px-6 pt-12 md:px-20 text-center xs:text-center lg:text-left">
+        <!-- <section id="about" class="relative bg-latte mb-8 py-10 min-h-screen my-auto " role="tabpanel">
+            <div class="container mx-auto px-6 pt-12 md:px-20 text-center">
                 <div class="mb-4">
                     <h1 class="font-heading font-bold text-matcha text-4xl tracking-tight italic">about</h1>
                 </div>
 
-                <div class="flex flex-col items-center sm:flex-row gap-6 py-10 text-center xs:text-center md:text-left">
-                    <div class="relative flex-shrink-0">
-                        <img src="assets/photo.jpg" alt="me" class="rounded-full" width="200" />
-                    </div>
-
+                <div class="max-w-screen-lg mx-auto flex flex-col items-center sm:flex-row gap-6 py-10 sm:text-center md:text-left">
                     <div class="relative">
                         <h3 class="text-2xl font-heading font-extrabold text-matcha">Mikayla Lopez</h3>
-                        <p class="font-normal font-mono sm:text-sm pt-4">
+                        <p class="font-normal font-mono text-base pt-4 lowercase">
                             Software engineer by day for almost 4 years, frontend dev at heart since 11 years old.
                             <br>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a justo non metus malesuada lobortis quis sed mauris. Nunc tincidunt ex nisi, finibus posuere mi ullamcorper eget. Nulla in nisl at dui interdum volutpat. Mauris sed quam sed neque dignissim blandit eu in enim. Suspendisse in risus sit amet nisi elementum consequat non et lorem. Integer nec mollis metus, vitae maximus ex. Vestibulum venenatis sit amet ante ut suscipit. Vestibulum ullamcorper id sem vitae dictum. Nullam eleifend feugiat sem, mollis laoreet turpis luctus eu. 
@@ -76,33 +79,34 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         
         <!-- resume -->
-        <section id="resume" class="relative bg-white mb-8 py-10 min-h-screen my-auto" role="tabpanel">
-            <div class="container mx-auto px-6 pt-12 md:px-20 text-center xs:text-center lg:text-left">
+        <section id="resume" class="relative bg-latte mb-8 py-10 min-h-screen my-auto" role="tabpanel">
+            <div class="container mx-auto px-6 pt-12 md:px-20 text-center">
                 <div class="mb-4">
                     <h1 class="font-heading font-bold text-mantis text-4xl tracking-tight italic">resume</h1>
                 </div>
 
-                <div class="relative flex flex-col items-center py-10 overflow-auto">
+                <div class="relative flex flex-col items-center py-10 overflow-auto max-w-screen-lg justify-between space-x-0 space-y-10 md:space-x-6 md:space-y-0 mx-auto text-left">
                     <div class="relative pb-10">
-                        <p class="sm:text-sm mb-6">
-                            Below is a brief overview of my skills and experiences. My current tech stack is <span class="text-mantis">.NET/C#</span>, <span class="text-mantis">Javascript</span>, and <span class="text-mantis">SQL</span> (<span class="text-mantis">Microsoft SQL Server/PostgreSQL</span>).
+                        <p class="text-base lg:text-base mb-6">
+                            As of July 2024, I'm working as a frontend developer for UK biotech startup, <a href="https://www.sava.health/" target="_blank" class="text-mantis underline">SAVA</a>.
+                            My current tech stack is <span class="text-mantis">.NET/C#</span>, <span class="text-mantis">Javascript</span>, and <span class="text-mantis">SQL</span> (<span class="text-mantis">Microsoft SQL Server/PostgreSQL</span>).
                             I have previously worked with <span class="text-mantis">Ruby on Rails</span> and developed personal projects using <span class="text-mantis">Python/Django</span>.
                             
                             Others that I've used in past projects include <span class="text-mantis">PHP</span>, via <span class="text-mantis">Laravel</span> and <span class="text-mantis">Wordpress</span>.
                             <br><br>
                             I'm currently immersing myself more in frontend development to expand my stack and skillset, using <span class="text-mantis">VueJS</span> and <span class="text-mantis">Tailwind</span>, and looking to take a deeper dive into <span class="text-mantis">UI/UX design</span>.
                         </p>
-                        <p class="sm:text-sm">
+                        <p class="text-base sm:text-sm">
                             <br>Think I'm a good fit for a role, or have any questions for me? Let's talk! Shoot me a message at: 
                             <a class="text-mantis hover:underline" href="mailto:mulopez@pm.me">mulopez (at) pm (dot) me</a>
                         </p>
                     </div>
 
-                    <a class="btn-download" href="assets/resume-2023.pdf" download="lopez-mikayla-resume-2023" role="button" target="_blank">Download PDF</a>
-                    <embed class="my-4 w-full min-h-screen border-honeydew-light hover:border-mantis-light border-4" src="assets/resume-2023.pdf" type="application/pdf">
+                    <a class="btn-download" href="assets/resume.pdf" download="lopez-mikayla-resume" role="button" target="_blank">Download PDF</a>
+                    <embed class="my-4 w-full min-h-screen border-honeydew-light hover:border-mantis-light border-4" src="assets/resume.pdf" type="application/pdf">
                 </div>
             </div>
         </section>
@@ -111,7 +115,7 @@
     <footer class="relative w-full px-16 py-8 bg-white mx-auto mt-auto container text-center">
         <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a matcha', '#91ca95', 'Z8Z5F3D4Q');kofiwidget2.draw();</script> 
         
-        <h6 class="mt-2 text-center text-xs text-paynes-gray font-sans uppercase">&#169; 2023 lazymaplekoi</h6>
+        <h6 class="mt-2 text-center text-xs text-paynes-gray font-sans uppercase">&#169; 2024 lazymaplekoi</h6>
     </footer>
 
     <!-- Statcounter -->
