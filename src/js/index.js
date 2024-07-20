@@ -1,4 +1,4 @@
-import { loadTabs, navigateTo, getTabContent, getActiveSection } from './tabs.js';
+import { loadTabs, navigateTo, getTabContent, getActiveSection, activateTab } from './tabs.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     loadTabs();
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const navigate = (tab) => {
-        navigateTo(tab);
+        activateTab(tab);
 
         const tabContent = getTabContent(tab);
         changeBackgroundTo(tabContent);
@@ -43,5 +43,3 @@ document.addEventListener('DOMContentLoaded', () => {
     const activeSection = getActiveSection();
     changeBackgroundTo(activeSection);
 });
-  
-
