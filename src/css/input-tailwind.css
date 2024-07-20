@@ -53,4 +53,12 @@
     .btn-download {
         @apply font-sans text-white bg-mantis hover:bg-mantis-light focus:outline-none focus:ring-1 focus:ring-mantis-light font-medium rounded-full text-base px-5 py-2.5 text-center mr-2 mb-2;
     }
+
+    .showcase {
+        @apply flex flex-col justify-center sm:flex-row my-6 sm:justify-start items-center;
+    }
+
+    img.showcase-image {
+        @apply block max-w-none h-full object-contain sm:max-w-full lg:max-w-none;
+    }
 }

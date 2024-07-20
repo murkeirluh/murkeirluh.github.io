@@ -685,6 +685,42 @@ a.sub-nav-item.active {
   --tw-ring-color: #91CA95ff;
 }
 
+.showcase {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .showcase {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+img.showcase-image {
+  display: block;
+  height: 100%;
+  max-width: none;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (min-width: 640px) {
+  img.showcase-image {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  img.showcase-image {
+    max-width: none;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -773,6 +809,11 @@ a.sub-nav-item.active {
   z-index: 50;
 }
 
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -808,6 +849,10 @@ a.sub-nav-item.active {
   margin-bottom: 2rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -818,14 +863,6 @@ a.sub-nav-item.active {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mt-12 {
-  margin-top: 3rem;
 }
 
 .box-border {
@@ -1296,11 +1333,6 @@ a.sub-nav-item.active {
   line-height: 2rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -1525,13 +1557,13 @@ a.sub-nav-item.active {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.hover\:text-honeydew:hover {
+  color: #E1EFE2ff;
+}
+
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(251 251 251 / var(--tw-text-opacity));
-}
-
-.hover\:text-honeydew:hover {
-  color: #E1EFE2ff;
 }
 
 .hover\:underline:hover {
@@ -1682,16 +1714,6 @@ a.sub-nav-item.active {
     flex-direction: row;
   }
 
-  .sm\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .sm\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
   .sm\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
@@ -1699,16 +1721,6 @@ a.sub-nav-item.active {
 
   .sm\:text-center {
     text-align: center;
-  }
-
-  .sm\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .sm\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
   }
 
   .sm\:text-sm {
@@ -1768,11 +1780,6 @@ a.sub-nav-item.active {
 @media (min-width: 1024px) {
   .lg\:w-\[278px\] {
     width: 278px;
-  }
-
-  .lg\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
   }
 
   .lg\:text-left {
