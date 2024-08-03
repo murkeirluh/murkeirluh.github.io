@@ -22,6 +22,14 @@
     p {
         @apply text-[0.9rem];
     }
+
+    img:not(.lightbox img), img:not(img#matcha-hero) {
+        @apply border-4 border-transparent hover:border-mantis;
+    }
+
+    .underline {
+        @apply underline-offset-2 hover:decoration-2;
+    }
 }
 
 @layer components {
@@ -55,10 +63,22 @@
     }
 
     .showcase {
-        @apply flex flex-col justify-center sm:flex-row my-6 sm:justify-start items-center;
+        @apply flex flex-col justify-center items-center my-6 lg:flex-row lg:justify-start md:items-center lg:items-start;
     }
 
     img.showcase-image {
-        @apply block max-w-none h-full object-contain sm:max-w-full lg:max-w-none;
+        @apply block max-w-none h-full object-contain md:max-w-full lg:max-w-none;
+    }
+
+    .lightbox {
+        @apply fixed w-screen h-screen backdrop-brightness-90 backdrop-blur top-0 left-0 opacity-100 transition-opacity duration-300 ease-in-out overflow-auto;
+    }
+
+    .lightbox.hidden {
+        @apply opacity-0;
+    }
+
+    .lightbox-image {
+        @apply hover:cursor-zoom-in;
     }
 }

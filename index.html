@@ -27,35 +27,35 @@
         <nav class="container mx-auto flex items-center justify-center space-x-6 text-paynes-gray md:space-x-8" role="tablist">
             <a href="#hero" class="nav-item" role="tab" aria-controls="hero" id="hero-tab" aria-selected="true" title="home"><img src="assets/matcha/32x32-t.png" width="28" class="p-[2px]"></a>
             <a href="#about" class="nav-item hover:text-white" role="tab" aria-controls="about" id="about-tab" aria-selected="false" title="about me">about</a>
-            <a href="#resume" class="nav-item " role="tab" aria-controls="resume" id="resume-tab" aria-selected="false" title="view my resume">resume</a>
-            <!-- <a href="#works" class="nav-item hover:text-white" role="tab" aria-controls="works" id="works-tab" aria-selected="false" title="view my works">works</a> -->
-            <a href="/works" class="nav-item hover:text-white" title="view my works">works <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#colophon" class="nav-item " role="tab" aria-controls="colophon" id="colophon-tab" aria-selected="false" title="about this site">colophon</a>
+            <a href="/works" class="nav-item hover:text-white" title="view my portfolio">portfolio <i class="fa-solid fa-arrow-right"></i></a>
         </nav>
     </header>
 
     <main id="matcha-content">
         <section id="hero" class="relative bg-white mb-8 py-10 min-h-screen my-auto scroll-mt-16" role="tabpanel">
-            <div class="max-w-screen-lg flex flex-col sm:flex-row items-center justify-between space-x-0 space-y-10 md:space-x-6 md:space-y-0 mx-auto px-8 pt-12 sm:px-20 md:px-12 text-center sm:text-center md:text-left">
+            <!-- TODO: simplify this shit -->
+            <div class="max-w-screen-lg flex flex-col sm:flex-row items-center justify-between space-x-0 space-y-10 md:space-x-6 md:space-y-0 mx-auto px-8 md:p-12 sm:px-20 text-center sm:text-center md:text-left">
                 <div class="col">
-                    <div class="mb-6 font-heading font-bold tracking-tight text-5xl md:text-6xl lg:text-7xl">
+                    <div class="mb-6 font-heading font-bold tracking-tight text-5xl lg:text-7xl">
                         <h1 class="text-mantis">matcha</h1>
                         <h1 class="italic text-honeydew">doin'here?</h1>
                     </div>
-                    <p class="text-sm text-paynes-gray font-normal font-mono lowercase tracking-wider sm:text-sm md:text-base">
-                        Hi, I'm Mikayla, aka matcha (on some parts of the internet.)<br>
+                    <p class="text-paynes-gray font-normal font-mono lowercase tracking-wider text-base">
+                        Hi, I'm Mikayla, aka matcha<br>(on some parts of the internet.)<br>
                         <br>
                         Here, have a cup while you look around.
                     </p>
                     <p class="mt-12 text-2xl text-paynes-gray font-normal font-mono lowercase tracking-widest">
                         <a href="https://www.linkedin.com/in/mikayla-lopez/" target="_blank" title="Linkedin" class="text-mantis hover:text-honeydew"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://github.com/murkeirluh/" target="_blank" title="Github" class="text-mantis hover:text-honeydew"><i class="fa-brands fa-github"></i></a>
-                        <a href="mailto:mulopez@pm.me" target="_blank" title="Email" class="text-mantis hover:text-honeydew"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="mailto:lazymaplekoi@pm.me" target="_blank" title="Email" class="text-mantis hover:text-honeydew"><i class="fa-solid fa-envelope"></i></a>
                         
                     </p>
                 </div>
                 
-                <div class="flex text-center justify-center">
-                    <img src="assets/matchapx-2.png" width="300" />
+                <div class="flex text-center justify-center max-w-[300px] w-full">
+                    <img id="matcha-hero" class="border-none hover:border-none object-contain" src="assets/matchapx-2.png" width="300" />
                 </div>
             </div>
         </section>
@@ -68,44 +68,25 @@
                 </div>
 
                 <div class="max-w-screen-lg mx-auto flex flex-col items-center sm:flex-row gap-6 py-10 sm:text-center md:text-left">
-                    <div class="relative">
-                        <h3 class="text-2xl font-heading font-extrabold text-matcha">Mikayla Lopez</h3>
-                        <p class="font-normal font-mono text-base pt-4">
-                            Software engineer by day, frontend dev at heart (since 11 years old).
-                            
-                            <br>Based in the Philippines.
-                        </p>
-                    </div>
+                    
+                    <p class="font-normal font-mono text-base pt-4">
+                        
+                    </p>
+
+                    <h3 class="text-2xl font-heading font-extrabold text-matcha">now</h3>
                 </div>
             </div>
         </section>
-        
-        <!-- resume -->
-        <section id="resume" class="relative bg-white mb-8 py-10 min-h-screen my-auto" role="tabpanel">
+
+        <!-- colophon -->
+        <section id="colophon" class="relative bg-white mb-8 py-10 min-h-screen my-auto " role="tabpanel">
             <div class="container mx-auto px-6 pt-12 md:px-20 text-center">
                 <div class="mb-4">
-                    <h1 class="font-heading font-bold text-mantis text-4xl tracking-tight italic">resume</h1>
+                    <h1 class="font-heading font-bold text-matcha text-4xl tracking-tight italic">colophon</h1>
                 </div>
 
-                <div class="relative flex flex-col items-center py-10 overflow-auto max-w-screen-lg justify-between space-x-0 space-y-10 md:space-x-6 md:space-y-2 mx-auto text-left">
-                    <div class="relative pb-10">
-                        <p class="text-base lg:text-base mb-6">
-                            As of July 2024, my full time job is being a frontend developer for UK biotech startup, <a href="https://www.sava.health/" target="_blank" class="text-mantis underline">SAVA</a>.
-                        </p>
-                        <p  class="text-base lg:text-base mb-6">
-                            My tech stack includes <span class="text-mantis">.NET/C#</span>, <span class="text-mantis">Javascript</span>, and <span class="text-mantis">SQL</span> (<span class="text-mantis">Microsoft SQL Server</span> and <span class="text-mantis">PostgreSQL</span>).
-                            I have also worked with <span class="text-mantis">Ruby on Rails</span> and <span class="text-mantis">Python/Django</span>.
-                            <br><br>
-                            I'm currently immersing myself more in frontend development to expand my stack and skillset. I'm learning <span class="line-through">VueJS</span> <span class="text-mantis">Svelte</span>, sharpening my <span class="text-mantis">Tailwind</span>, and looking to take a deeper dive into <span class="text-mantis">UI/UX design</span> by designing as many websites as I humanly can.
-                        </p>
-                        <p class="text-base">
-                            <br>Think I'm a good fit for a role, or have any questions for me? Shoot me a message at:
-                            <a class="text-mantis hover:underline" href="mailto:mulopez@pm.me">mulopez (at) pm (dot) me</a>
-                        </p>
-                    </div>
-
-                    <a class="btn-download" href="assets/resume.pdf" download="lopez-mikayla-resume" role="button" target="_blank">Download PDF</a>
-                    <embed class="my-4 w-full min-h-screen border-honeydew-light hover:border-mantis-light border-4" src="assets/resume.pdf" type="application/pdf">
+                <div class="max-w-screen-lg mx-auto flex flex-col items-center sm:flex-row gap-6 py-10 sm:text-center md:text-left">
+                    <p>What the heck is a colophon?</p>
                 </div>
             </div>
         </section>

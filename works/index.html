@@ -21,26 +21,39 @@
     <title>@lazymaplekoi - works</title>
 </head>
 <body class="flex flex-col min-h-screen box-border scroll-smooth">
-    <div id="nav-background" class="fixed left-0 top-0 right-0 block h-[84px] bg-z-10 bg-gradient-to-b from-latte from-50%"></div>
+    <div id="lightbox" class="lightbox hidden z-30">
+        <div class="flex items-center justify-center w-full h-full" role="dialog" aria-hidden="true"> 
+            <div class="max-w-screen-2xl max-h-screen p-12">
+                <img src="" class="max-w-full max-h-full object-contain" />
+            </div>
+        </div>
+
+        <div class="fixed top-0 right-0">
+            <div class="p-6 pt-3 text-2xl">
+                <span class="close-lightbox hover:cursor-pointer"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+        </div>
+    </div>
+    <div id="nav-background" class="fixed left-0 top-0 right-0 block h-[84px] z-10 bg-gradient-to-b from-latte from-50%"></div>
     <header class="sticky left-0 top-0 right-0 pt-6 pb-10 md:pb-8 z-20 bg-latte">
         <nav class="container mx-auto flex items-center justify-center space-x-6 text-paynes-gray md:space-x-8" role="tablist">
             <a href="/" class="nav-item" aria-selected="false" title="home"><img src="/assets/matcha/32x32-t.png" width="28" class="p-[2px]"></a>
             <a href="/#about" class="nav-item hidden xs:flex" title="about me">about</a>
-            <a href="/#resume" class="nav-item hidden xs:flex" title="view my resume">resume</a>
-            <a href="#index" class="nav-item active" role="tab" aria-controls="works" id="works-tab" aria-selected="false" title="view my works">works <i class="fa-solid fa-arrow-down"></i></a>
+            <a href="/#colophon" class="nav-item hidden xs:flex" title="about this site">colophon</a>
+            <a href="#index" class="nav-item active" role="tab" aria-controls="works" id="works-tab" aria-selected="false" title="view my portfolio">portfolio <i class="fa-solid fa-arrow-down"></i></a>
         </nav>
-        <nav class="flex w-[184px] max-w-[278px] mx-auto items-center justify-center xs:justify-end space-x-4 mt-3 text-paynes-gray xs:w-[254px] lg:w-[278px]" role="tablist">
-            <a href="#index" class="sub-nav-item active px-1" role="tab" aria-controls="index" id="index-tab" aria-selected="true" title="index">#</a>
+        <nav class="flex w-full max-w-[330px] mx-auto items-center justify-center xs:justify-end space-x-4 mt-3 text-paynes-gray xs:w-[300px] lg:w-full" role="tablist">
             <a href="#web" class="sub-nav-item" role="tab" aria-controls="web" id="web-tab" aria-selected="false" title="web">web</a>
             <a href="#software" class="sub-nav-item" role="tab" aria-controls="software" id="software-tab" aria-selected="false" title="software">software</a>
             <a href="#misc" class="sub-nav-item" role="tab" aria-controls="misc" id="misc-tab" aria-selected="false" title="misc">misc</a>
+            <a href="#resume" class="sub-nav-item" role="tab" aria-controls="resume" id="resume-tab" aria-selected="false" title="resume">hire me</a>
         </nav>
     </header>
 
     <main id="work-content" class="relative w-full bg-latte">
         <!-- works: index -->
         <section id="index" class="mb-8 pb-10 min-h-screen my-auto scroll-mt-28" role="tabpanel">
-            <div class="container mx-auto px-6 md:px-20 text-center xs:text-center lg:text-left">
+            <div class="container mx-auto px-6 md:px-20 text-center xs:text-center lg:text-left h-full">
                 <div class="mb-4">
                     <h1 class="font-heading font-bold text-matcha text-4xl tracking-tight italic">works</h1>
                     <!-- <h4 class="font-mono uppercase text-paynes-gray text-xl tracking-tight">index</h1> -->
@@ -52,41 +65,39 @@
         </section>
 
         <!-- works: web -->
-        <section id="web" class="mb-8 pb-10 min-h-screen my-auto scroll-mt-28" role="tabpanel">
-            <div class="container mx-auto px-6 md:px-20 text-center xs:text-center lg:text-left">
+        <section id="web" class="mb-16 pb-10 min-h-screen my-auto scroll-mt-28" role="tabpanel">
+            <div class="container mx-auto px-6 md:px-20 text-center md:text-center lg:text-left">
                 <div class="mb-4">
                     <h1 class="font-heading font-bold text-matcha text-4xl tracking-tight italic">web</h1>
-                    <h4 class="font-mono uppercase text-paynes-gray text-xl tracking-tight">designs - personal</h1>
+                    <h4 class="font-mono text-paynes-gray text-lg tracking-tight">personal designs</h1>
                 </div>
-                <div id="personal" class="max-w-screen-lg mb-8">
+                <div id="personal" class="max-w-screen-xl mb-8 flex flex-col gap-y-4">
                     <div class="showcase">
                         <figure class="relative p-4">
-                            <a href="/assets/screens/matchadoinhere.png" target="_blank">
-                                <img class="showcase-image" src="/assets/screens/matchadoinhere.png" width="300" />
-                            </a>
+                            <img class="showcase-image lightbox-image" src="/assets/screens/matchadoinhere.png" width="300" />
                         </figure>
-                        <div class="relative mx-6">
+                        <div class="relative mx-6 pt-4">
                             <h2 class="text-matcha font-bold text-lg">Matcha Doin' Here?</h2>
                             <p>July 2024</p>
-                            <p>
+                            <p class="text-base">
                                 <br>
-                                Current design of my personal website.
+                                Current design of my personal website. Screenshot may not reflect recent changes.
                             </p>
-                            <p><br>Built with HTML, Tailwind, and a sprinkle of Javascript for the scrolling effect.</p>
+                            <p><br>Built with HTML, Tailwind, and Javascript.</p>
                         </div>
                     </div>
                     <div class="showcase">
                         <figure class="relative p-4">
-                            <a href="/assets/screens/taragig.png" target="_blank">
-                                <img class="showcase-image" src="/assets/screens/taragig.png" width="300" />
-                            </a>
+                            <!-- <a href="/assets/screens/taragig.png" target="_blank"> -->
+                                <img class="showcase-image lightbox-image" src="/assets/screens/taragig.png" width="300" />
+                            <!-- </a> -->
                         </figure>
-                        <div class="relative mx-6">
+                        <div class="relative mx-6 pt-4">
                             <h2 class="text-matcha font-bold text-lg">Tara Gig!</h2>
                             <p class="">October 2023</p>
-                            <p>
+                            <p class="text-base">
                                 <br>
-                                A WIP passion project made for fellow gig enthusiasts. You can check it out <a class="text-mantis underline" href="https://taragig.com" target="_blank">here</a>.
+                                A <a class="text-mantis underline" href="https://taragig.com" target="_blank">WIP passion project</a> made for fellow gig enthusiasts.
                                 <br>
                                 My idea for <a class="text-mantis underline" href="https://buildspace.so/nw" target="_blank">nights & weekends</a> s4 and s5.
                             </p>
@@ -96,80 +107,89 @@
                     </div>
                     <div class="showcase">
                         <figure class="relative p-4">
-                            <a href="/assets/screens/thehollowmen.png" target="_blank">
-                                <img class="showcase-image" src="/assets/screens/thehollowmen.png" width="300"/>
-                            </a>
+                            <img class="showcase-image lightbox-image" src="/assets/screens/thehollowmen.png" width="300"/>
                         </figure>
-                        <div class="relative mx-6">
-                            <h2 class="text-matcha font-bold text-lg">The Hollow Men</h2>
-                            <p>January 2020</p>
-                            <p>
+                        <div class="relative mx-6 pt-4">
+                            <div class="flex flex-col md:columns-1 lg:columns-2 justify-between items-center">
+                                <div>
+                                    <h2 class="text-matcha font-bold text-lg">The Hollow Men</h2>
+                                    <p>January 2020</p>
+                                </div>
+                                <div class="">
+                                    <p class="text-xs text-right sm:text-center sm:mt-2">
+                                        (My personal favorite. I need to make more of these!)
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <p class="text-base">
                                 <br>
                                 A simple, minimalist theme for one of the many personal blogs I have scattered around the internet.
                                 Inspired by <a class="text-mantis underline" href="https://msu.edu/~jungahre/transmedia/the-hollow-men.html">a page from the Michigan State University website</a> that unfortunately does not exist anymore.
                             </p>
                             <p>
                                 <br>
-                                Made with vanilla HTML and CSS.
+                                Made with vanilla HTML and CSS, generated with <a class="text-mantis underline" href="https://hexo.io/">Hexo</a>.
                             </p>
                         </div>
                     </div>
                     <div class="showcase">
                         <figure class="relative p-4">
-                            <a href="/assets/screens/initportfolio.png" target="_blank">
-                                <img class="showcase-image" src="/assets/screens/initportfolio.png" width="300" />
-                            </a>
+                            <img class="showcase-image lightbox-image" src="/assets/screens/initportfolio.png" width="300" />
                         </figure>
-                        <div class="relative mx-6">
+                        <div class="relative mx-6 pt-4">
                             <h2 class="text-matcha font-bold text-lg">Sunflower</h2>
                             <p>July 2019</p>
-                            <p>
+                            <p class="text-base">
                                 <br>
                                 The first design of my personal website. Features a simple white background with sunflower yellow accents.
-                                (That's me fresh out of uni.)
+                                (That's me fresh out of uni. 🌻)
                             </p>
-                            <p><br>Built with HTML and CSS.</p>
+                            <p><br>Made with HTML and CSS.</p>
                         </div>
                     </div>
                 </div>
                 <hr class="w-full my-12">
-                <div id="work" class="max-w-screen-lg mb-4">
+                <div id="work" class="max-w-screen-xl mb-4">
                     <div class="mb-4">
                         <h1 class="font-heading font-bold text-matcha text-4xl tracking-tight italic">web</h1>
-                        <h4 class="font-mono uppercase text-paynes-gray text-xl tracking-tight">designs - clients</h1>
+                        <h4 class="font-mono text-paynes-gray text-lg tracking-tight">designs for clients</h1>
                     </div>
                     
                     <div class="showcase">
                         <figure class="relative p-4 h-[300px]">
-                            <a href="/assets/screens/utak.png" target="_blank">
-                                <img class="showcase-image" src="/assets/screens/utak.png" width="300" />
-                            </a>
+                            <img class="showcase-image lightbox-image" src="/assets/screens/utak.png" width="300" />
                         </figure>
-                        <div class="relative mx-6">
+                        <div class="relative mx-6 pt-4">
                             <h2 class="text-matcha font-bold text-lg">UP UTAK</h2>
                             <p>March 2022 - May 2022</p>
-                            <p>
+                            <p class="text-base">
                                 <br>
                                 A web app built on Wordpress. Card design inspired by Airbnb.
+                            </p>
+                            <p>
+                                <br>
+                                PHP, CSS, Javascript.
                             </p>
                         </div>
                     </div>
                     <div class="showcase">
                         <figure class="relative p-4">
-                            <a href="/assets/screens/iaads2.png" target="_blank">
-                                <img class="showcase-image" src="/assets/screens/iaads2.png" width="300" />
-                            </a>
+                            <img class="showcase-image lightbox-image" src="/assets/screens/iaads2.png" width="300" />
                         </figure>
-                        <div class="relative mx-6">
+                        <div class="relative mx-6 pt-4">
                             <h2 class="text-matcha font-bold text-lg">iAADS+ Portal</h2>
                             <p>Aug 2020 - Feb 2022</p>
-                            <p>
+                            <p class="text-base">
                                 <br>
                                 The iAADS+ Portal is a centralized online instrument developed to help degree programs prepare for accreditation, assessment, or other modes of external quality assurance.
                             </p>
                             <p>
                                 <br>
                                 Ruby on Rails, HAML, Sass, Bootstrap.
+                            </p>
+                            <p class="text-xs text-right sm:text-center mt-6">
+                                (This happens to be my first design gig. Not my favorite work tbh.)
                             </p>
                         </div>
                     </div>
@@ -178,13 +198,13 @@
         </section>
 
         <!-- works: software -->
-        <section id="software" class="mb-8 pb-10 min-h-screen my-auto scroll-mt-28" role="tabpanel">
+        <section id="software" class="mb-16 pb-10 min-h-screen my-auto scroll-mt-28" role="tabpanel">
             <div class="container mx-auto px-6 md:px-20 text-center xs:text-center lg:text-left">
                 <div class="mb-4">
                     <h1 class="font-heading font-bold text-matcha text-4xl tracking-tight italic">software</h1>
                     <!-- <h4 class="font-mono uppercase text-paynes-gray text-xl tracking-tight">index</h1> -->
                 </div>
-                <div class="max-w-screen-lg mb-4">
+                <div class="max-w-screen-xl mb-4">
                     <div class="flex flex-col items-start justify-center my-6 sm:items-center lg:items-start">
                         <figure class="relative p-4">
                             <iframe class="w-full sm:w-[300px] lg:w-[600px] h-full aspect-video" src="https://drive.google.com/file/d/1JEOIgQ2HDZgI5bX0p0Jp6PIAjrhMio7p/preview" allow="autoplay"></iframe>
@@ -194,20 +214,20 @@
                                 Adaptive Virtual Reality Disaster Simulation
                             </h2>
                             <p>September 2018 - May 2019</p>
-                            <p>
+                            <p class="text-base">
                                 <br>
                                 I made a virtual reality (VR) app for my thesis! Shoutout to my thesis partner, Arianne Valencia.
                                 </p>
-                            <p>
+                            <p class="text-base">
                                 This simulates scenarios before and during a typhoon, and aims to teach best practices to follow when faced with hazards brought by typhoon flooding.
                             </p>
-                            <p>
+                            <p class="text-base">
                                 <br>
                                 Developed using Unity3D and C# for Google Cardboard-compatible Android smartphones.
                             </p>
-                            <p>
-                                This project is <a class="text-mantis underline" href="https://github.com/murkeirluh/cs199-adaptivevr" target="_blank">open-source</a>!
-                                The manuscript can be found <a class="text-mantis underline" href="https://murkeirluh.github.io/assets/lopez-valencia-paper.pdf" target="_blank">here</a>.
+                            <p class="mt-6">
+                                This project is <a class="text-mantis underline" href="https://github.com/murkeirluh/cs199-adaptivevr" target="_blank">open source</a>!
+                                If you're interested in reading the manuscript, please send me a message.
                             </p>
                         </div>
                     </div>
@@ -216,27 +236,55 @@
         </section>
 
         <!-- works: misc -->
-        <section id="misc" class="mb-8 pb-10 min-h-screen my-auto scroll-mt-28" role="tabpanel">
-            <div class="container mx-auto px-6 md:px-20 text-center xs:text-center lg:text-left">
+        <section id="misc" class="mb-16 pb-10 min-h-screen my-auto scroll-mt-28" role="tabpanel">
+            <div class="container mx-auto px-6 md:px-20 text-center sm:text-center md:text-left">
                 <div class="mb-4">
                     <h1 class="font-heading font-bold text-matcha text-4xl tracking-tight italic">miscellaneous</h1>
-                    <!-- <h4 class="font-mono uppercase text-paynes-gray text-xl tracking-tight">index</h1> -->
                 </div>
-                <div class="max-w-screen-xl mb-4">
-                    <p>I used to dabble in graphic design and enjoyed making event posters ("pubmats", or publicity materials, as we liked to call them) when I was still in uni.
+                <div class="max-w-screen-xl mb-6">
+                    <p class="text-base mb-12">I used to dabble in graphic design and enjoyed making event posters ("pubmats", or publicity materials, as we liked to call them) when I was still in uni.
                         I created dozens of those, but these ones are my favorites.</p>
                     
-                    <div class="flex flex-col space-y-3 mt-4 sm:justify-center sm:space-x-0 sm:items-center sm:flex-col lg:justify-normal lg:flex-row lg:space-x-3 lg:space-y-0 lg:items-end">
-                        
-                            <img src="/assets/pubs/algo.png" width="400" />
-                            <img src="/assets/pubs/apilladay.jpg" width="400" />
-                        <img src="/assets/pubs/recruitment1819.gif" width="400" />
+                    <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 mt-4">
+                        <img src="/assets/pubs/algo.png" class="lightbox-image w-full md:w-[calc(33.333%-11px)] max-w-[400px]" />
+                        <img src="/assets/pubs/apilladay.jpg" class="lightbox-image w-full md:w-[calc(33.333%-11px)] max-w-[400px] hover:cursor-zoom-in" />
+                        <img src="/assets/pubs/recruitment1819.gif" class="lightbox-image w-full md:w-[calc(33.333%-11px)] max-w-[400px] hover:cursor-zoom-in" />
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- resume -->
+        <section id="resume" class="mb-8 pb-10 min-h-screen my-auto scroll-mt-28" role="tabpanel">
+            <div class="container mx-auto px-6 md:px-20 text-center xs:text-center lg:text-left">
+                <div class="mb-4">
+                    <h1 class="font-heading font-bold text-matcha text-4xl tracking-tight italic">hire me</h1>
+                </div>
+
+                <div class="max-w-screen-xl mb-4">
+                    <div class="relative">
+                        <p class="mb-6 text-base">
+                            As of July 2024, my full time job is being a frontend developer for UK biotech startup, <a href="https://www.sava.health/" target="_blank" class="text-mantis underline">SAVA</a>.<br>
+                            I can only do work on the weekends given this constraint.
+                        </p>
+                        <p class="mb-6 text-base">
+                            My tech stack includes <span class="text-mantis">.NET/C#</span>, <span class="text-mantis">Javascript</span>, and <span class="text-mantis">SQL</span> (<span class="text-mantis">Microsoft SQL Server</span> and <span class="text-mantis">PostgreSQL</span>).
+                            I have also worked with <span class="text-mantis">Ruby on Rails</span> and <span class="text-mantis">Python/Django</span>.
+                            <br><br>
+                            I'm currently immersing myself more in frontend development to expand my stack and skillset. I'm learning <span class="text-mantis">Svelte</span>, sharpening my <span class="text-mantis">Tailwind</span>, and looking to take a deeper dive into <span class="text-mantis">UI/UX design</span> by designing as many websites as I humanly can.
+                        </p>
+                        <p class="text-base">
+                            <br>Think I'm a good fit for a role, or have any questions for me? Shoot me a message at
+                            <a class="text-mantis underline" href="mailto:matcha@lazymaplekoi.xyz">matcha (at) lazymaplekoi (dot) xyz</a>
+                        </p>
+                    </div>
+
+                    <!-- <a class="btn-download" href="assets/resume.pdf" download="lopez-mikayla-resume" role="button" target="_blank">Download PDF</a>
+                    <embed class="my-4 w-full min-h-screen border-honeydew-light hover:border-mantis-light border-4" src="assets/resume.pdf" type="application/pdf"> -->
+                </div>
+            </div>
+        </section>
     </main>
-    
 
     <footer class="relative w-full px-16 py-8 bg-white mx-auto mt-auto container text-center">
         <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a matcha', '#91ca95', 'Z8Z5F3D4Q');kofiwidget2.draw();</script> 
