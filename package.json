@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "npx live-server",
-        "watch:css": "npx tailwindcss -i src/css/input-tailwind.css -o src/css/tailwind.css --watch"
+        "watch:css": "npx tailwindcss -i src/css/input-tailwind.css -o src/css/tailwind.css --watch --minify"
     },
     "keywords": [],
     "author": "",
